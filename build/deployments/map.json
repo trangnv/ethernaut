@@ -1,0 +1,39 @@
+{
+  "4": {
+    "GatekeeperOneAttack": [
+      "0xFBB4420690e84859106812b1d1D637d68cf3caB9",
+      "0x7e87f0150D699a3D0437ccBAFF6c5784Eb81de3a"
+    ],
+    "GatekeeperTwo": [
+      "0xAf22dbaa986B29F37bbCCeecC97e5E88F6833DEc"
+    ],
+    "GatekeeperTwoAttack": [
+      "0xd5815F778603cE0156105c140846a1eF6A24E26f",
+      "0xC4Ee04ac83980545Eb32D8A23b5a16f9C8Df76a4",
+      "0x555c36A9fEE9b10681E08F0B9A5ae9c933e98B29"
+    ],
+    "LibraryContract": [
+      "0x7Dc17e761933D24F4917EF373F6433d4a62fe3c5"
+    ],
+    "NaughtCoin": [
+      "0x9D60B6592D6BCb0DeA2d6cC70218608563876da3"
+    ],
+    "Preservation": [
+      "0x6d24ca507baf4d9E135c8B8F19AbE96CC5754294"
+    ],
+    "PreservationAttack": [
+      "0xF01Ab9261Ca2eb8b2E8dF82830C2369E8aA82bF4"
+    ],
+    "Privacy": [
+      "0xd211CA8cf67A92F5a380D1BD192142f21b53CAdA"
+    ],
+    "Recovery": [
+      "0x86F32fd6Bc393A66e3243ceb785D7f7BCD9FfFBA"
+    ],
+    "SimpleToken": [
+      "0xb5cc1eE21d2DFB70764B9cE74443F182Dc794c75",
+      "0x881F733bB25B7108AcdAc84E59026548AEaA9bA9",
+      "0x0EB8e4771ABA41B70d0cb6770e04086E5aee5aB2"
+    ]
+  }
+}

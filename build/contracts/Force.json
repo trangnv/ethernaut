@@ -1,0 +1,144 @@
+{
+  "abi": [],
+  "allSourcePaths": {
+    "11": "contracts/07_Force/Force.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/07_Force/Force.sol",
+    "exportedSymbols": {
+      "Force": [
+        360
+      ]
+    },
+    "id": 361,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 359,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:11"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 360,
+        "linearizedBaseContracts": [
+          360
+        ],
+        "name": "Force",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 361,
+        "src": "57:118:11"
+      }
+    ],
+    "src": "32:143:11"
+  },
+  "bytecode": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220f8fd140b8a0e0b3fc8f4932bce295345da6bb6aedb29fd54d1cab339f5e48f6b64736f6c634300060c0033",
+  "bytecodeSha1": "73df0a6f5d0123eb2b2db0faf62b602aa77c123a",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.12+commit.27d51765"
+  },
+  "contractName": "Force",
+  "coverageMap": {
+    "branches": {
+      "11": {}
+    },
+    "statements": {
+      "11": {}
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "6080604052600080fdfea2646970667358221220f8fd140b8a0e0b3fc8f4932bce295345da6bb6aedb29fd54d1cab339f5e48f6b64736f6c634300060c0033",
+  "deployedSourceMap": "57:118:11:-:0;;;;;",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    57,
+    175
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xF8 REVERT EQ SIGNEXTEND DUP11 0xE SIGNEXTEND EXTCODEHASH 0xC8 DELEGATECALL SWAP4 0x2B 0xCE 0x29 MSTORE8 GASLIMIT 0xDA PUSH12 0xB6AEDB29FD54D1CAB339F5E4 DUP16 PUSH12 0x64736F6C634300060C003300 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        57,
+        175
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        57,
+        175
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        57,
+        175
+      ],
+      "op": "MSTORE",
+      "path": "11"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        57,
+        175
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x0"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        57,
+        175
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        57,
+        175
+      ],
+      "op": "REVERT",
+      "path": "11"
+    }
+  },
+  "sha1": "22d4fd0cdaec55b3586aca2541903a2d601e5939",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.6.0;\n\ncontract Force {/*\n\n                   MEOW ?\n         /\\_/\\   /\n    ____/ o o \\\n  /~____  =\u00f8= /\n (______)__m_m)\n\n*/}",
+  "sourceMap": "57:118:11:-:0;;;;;;;;;;;;;;;;;;;",
+  "sourcePath": "contracts/07_Force/Force.sol",
+  "type": "contract"
+}

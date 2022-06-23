@@ -1,0 +1,3009 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "payable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "_king",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "prize",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "allSourcePaths": {
+    "14": "contracts/09_King/King.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/09_King/King.sol",
+    "exportedSymbols": {
+      "King": [
+        482
+      ]
+    },
+    "id": 483,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 415,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:14"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 482,
+        "linearizedBaseContracts": [
+          482
+        ],
+        "name": "King",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 417,
+            "mutability": "mutable",
+            "name": "king",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 482,
+            "src": "76:20:14",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address_payable",
+              "typeString": "address payable"
+            },
+            "typeName": {
+              "id": 416,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "76:15:14",
+              "stateMutability": "payable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "functionSelector": "e3ac5d26",
+            "id": 419,
+            "mutability": "mutable",
+            "name": "prize",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 482,
+            "src": "100:17:14",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 418,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "100:4:14",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "8da5cb5b",
+            "id": 421,
+            "mutability": "mutable",
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 482,
+            "src": "121:28:14",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address_payable",
+              "typeString": "address payable"
+            },
+            "typeName": {
+              "id": 420,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "121:15:14",
+              "stateMutability": "payable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 439,
+              "nodeType": "Block",
+              "src": "183:77:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 427,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 424,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 421,
+                      "src": "189:5:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 425,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -15,
+                        "src": "197:3:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 426,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "197:10:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "189:18:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "id": 428,
+                  "nodeType": "ExpressionStatement",
+                  "src": "189:18:14"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 432,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 429,
+                      "name": "king",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 417,
+                      "src": "215:4:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 430,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -15,
+                        "src": "222:3:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 431,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "222:10:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "215:17:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "id": 433,
+                  "nodeType": "ExpressionStatement",
+                  "src": "215:17:14"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 437,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 434,
+                      "name": "prize",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 419,
+                      "src": "238:5:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 435,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -15,
+                        "src": "246:3:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 436,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "value",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "246:9:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "238:17:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 438,
+                  "nodeType": "ExpressionStatement",
+                  "src": "238:17:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 440,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 422,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "165:2:14"
+            },
+            "returnParameters": {
+              "id": 423,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "183:0:14"
+            },
+            "scope": 482,
+            "src": "154:106:14",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 472,
+              "nodeType": "Block",
+              "src": "291:137:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 452,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 447,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 444,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": -15,
+                              "src": "305:3:14",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 445,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "value",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "305:9:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": ">=",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 446,
+                            "name": "prize",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 419,
+                            "src": "318:5:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "305:18:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "||",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          },
+                          "id": 451,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 448,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": -15,
+                              "src": "327:3:14",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 449,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "327:10:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "==",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 450,
+                            "name": "owner",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 421,
+                            "src": "341:5:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          },
+                          "src": "327:19:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "src": "305:41:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 443,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "297:7:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 453,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "297:50:14",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 454,
+                  "nodeType": "ExpressionStatement",
+                  "src": "297:50:14"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 458,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "367:3:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 459,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "value",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "367:9:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 455,
+                        "name": "king",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 417,
+                        "src": "353:4:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "id": 457,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "353:13:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 460,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "353:24:14",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 461,
+                  "nodeType": "ExpressionStatement",
+                  "src": "353:24:14"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 465,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 462,
+                      "name": "king",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 417,
+                      "src": "383:4:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 463,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -15,
+                        "src": "390:3:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 464,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "390:10:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "383:17:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "id": 466,
+                  "nodeType": "ExpressionStatement",
+                  "src": "383:17:14"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 470,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 467,
+                      "name": "prize",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 419,
+                      "src": "406:5:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 468,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -15,
+                        "src": "414:3:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 469,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "value",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "414:9:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "406:17:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 471,
+                  "nodeType": "ExpressionStatement",
+                  "src": "406:17:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 473,
+            "implemented": true,
+            "kind": "receive",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 441,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "271:2:14"
+            },
+            "returnParameters": {
+              "id": 442,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "291:0:14"
+            },
+            "scope": 482,
+            "src": "264:164:14",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 480,
+              "nodeType": "Block",
+              "src": "487:22:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 478,
+                    "name": "king",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 417,
+                    "src": "500:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "functionReturnParameters": 477,
+                  "id": 479,
+                  "nodeType": "Return",
+                  "src": "493:11:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "29cc6d6f",
+            "id": 481,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_king",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 474,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "446:2:14"
+            },
+            "returnParameters": {
+              "id": 477,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 476,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 481,
+                  "src": "470:15:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 475,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "470:15:14",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "469:17:14"
+            },
+            "scope": 482,
+            "src": "432:77:14",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 483,
+        "src": "57:454:14"
+      }
+    ],
+    "src": "32:479:14"
+  },
+  "bytecode": "6080604052600280546001600160a01b031990811633908117909255600080549091169091179055346001556101808061003a6000396000f3fe6080604052600436106100385760003560e01c806329cc6d6f146100b95780638da5cb5b146100ea578063e3ac5d26146100ff576100b4565b366100b4576001543410158061005857506002546001600160a01b031633145b61006157600080fd5b600080546040516001600160a01b03909116913480156108fc02929091818181858888f1935050505015801561009b573d6000803e3d6000fd5b50600080546001600160a01b0319163317905534600155005b600080fd5b3480156100c557600080fd5b506100ce610126565b604080516001600160a01b039092168252519081900360200190f35b3480156100f657600080fd5b506100ce610135565b34801561010b57600080fd5b50610114610144565b60408051918252519081900360200190f35b6000546001600160a01b031690565b6002546001600160a01b031681565b6001548156fea2646970667358221220eaf1fa6db8534797b3128a2db10d044f0df55c44ae79291c7b72482be6cfcd6e64736f6c634300060c0033",
+  "bytecodeSha1": "5261aaecc494eb54dd7e0ddb61c7c66613eaaeb5",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.12+commit.27d51765"
+  },
+  "contractName": "King",
+  "coverageMap": {
+    "branches": {
+      "14": {
+        "King.<receive>": {
+          "5": [
+            305,
+            323,
+            true
+          ],
+          "6": [
+            327,
+            346,
+            true
+          ]
+        }
+      }
+    },
+    "statements": {
+      "14": {
+        "King.<receive>": {
+          "0": [
+            297,
+            347
+          ],
+          "1": [
+            353,
+            377
+          ],
+          "2": [
+            383,
+            400
+          ],
+          "3": [
+            406,
+            423
+          ]
+        },
+        "King._king": {
+          "4": [
+            493,
+            504
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "6080604052600436106100385760003560e01c806329cc6d6f146100b95780638da5cb5b146100ea578063e3ac5d26146100ff576100b4565b366100b4576001543410158061005857506002546001600160a01b031633145b61006157600080fd5b600080546040516001600160a01b03909116913480156108fc02929091818181858888f1935050505015801561009b573d6000803e3d6000fd5b50600080546001600160a01b0319163317905534600155005b600080fd5b3480156100c557600080fd5b506100ce610126565b604080516001600160a01b039092168252519081900360200190f35b3480156100f657600080fd5b506100ce610135565b34801561010b57600080fd5b50610114610144565b60408051918252519081900360200190f35b6000546001600160a01b031690565b6002546001600160a01b031681565b6001548156fea2646970667358221220eaf1fa6db8534797b3128a2db10d044f0df55c44ae79291c7b72482be6cfcd6e64736f6c634300060c0033",
+  "deployedSourceMap": "57:454:14:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;318:5;;305:9;:18;;:41;;;-1:-1:-1;341:5:14;;-1:-1:-1;;;;;341:5:14;327:10;:19;305:41;297:50;;;;;;353:4;;;:24;;-1:-1:-1;;;;;353:4:14;;;;367:9;353:24;;;;;367:9;;353:24;:4;:24;367:9;353:4;:24;;;;;;;;;;;;;;;;;;;;-1:-1:-1;383:4:14;:17;;-1:-1:-1;;;;;;383:17:14;390:10;383:17;;;414:9;383:17;406;57:454;;;;;432:77;;;;;;;;;;;;;:::i;:::-;;;;-1:-1:-1;;;;;432:77:14;;;;;;;;;;;;;;121:28;;;;;;;;;;;;;:::i;100:17::-;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;432:77;470:15;500:4;-1:-1:-1;;;;;500:4:14;432:77;:::o;121:28::-;;;-1:-1:-1;;;;;121:28:14;;:::o;100:17::-;;;;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    57,
+    511
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x38 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x29CC6D6F EQ PUSH2 0xB9 JUMPI DUP1 PUSH4 0x8DA5CB5B EQ PUSH2 0xEA JUMPI DUP1 PUSH4 0xE3AC5D26 EQ PUSH2 0xFF JUMPI PUSH2 0xB4 JUMP JUMPDEST CALLDATASIZE PUSH2 0xB4 JUMPI PUSH1 0x1 SLOAD CALLVALUE LT ISZERO DUP1 PUSH2 0x58 JUMPI POP PUSH1 0x2 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND CALLER EQ JUMPDEST PUSH2 0x61 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0x40 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP2 AND SWAP2 CALLVALUE DUP1 ISZERO PUSH2 0x8FC MUL SWAP3 SWAP1 SWAP2 DUP2 DUP2 DUP2 DUP6 DUP9 DUP9 CALL SWAP4 POP POP POP POP ISZERO DUP1 ISZERO PUSH2 0x9B JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP PUSH1 0x0 DUP1 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB NOT AND CALLER OR SWAP1 SSTORE CALLVALUE PUSH1 0x1 SSTORE STOP JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0xC5 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0xCE PUSH2 0x126 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP3 AND DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0xF6 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0xCE PUSH2 0x135 JUMP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x10B JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x114 PUSH2 0x144 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH1 0x0 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND SWAP1 JUMP JUMPDEST PUSH1 0x2 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP2 JUMP JUMPDEST PUSH1 0x1 SLOAD DUP2 JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xEA CALL STATICCALL PUSH14 0xB8534797B3128A2DB10D044F0DF5 0x5C DIFFICULTY 0xAE PUSH26 0x291C7B72482BE6CFCD6E64736F6C634300060C00330000000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        57,
+        511
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "MSTORE",
+      "path": "14"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "CALLDATASIZE",
+      "path": "14"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "LT",
+      "path": "14"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0x38"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "JUMPI",
+      "path": "14"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x0"
+    },
+    "15": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "CALLDATALOAD",
+      "path": "14"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0xE0"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "SHR",
+      "path": "14"
+    },
+    "19": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "PUSH4",
+      "path": "14",
+      "value": "0x29CC6D6F"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "EQ",
+      "path": "14"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0xB9"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "JUMPI",
+      "path": "14"
+    },
+    "30": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "PUSH4",
+      "path": "14",
+      "value": "0x8DA5CB5B"
+    },
+    "36": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "EQ",
+      "path": "14"
+    },
+    "37": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0xEA"
+    },
+    "40": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "JUMPI",
+      "path": "14"
+    },
+    "41": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "PUSH4",
+      "path": "14",
+      "value": "0xE3AC5D26"
+    },
+    "47": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "EQ",
+      "path": "14"
+    },
+    "48": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0xFF"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "JUMPI",
+      "path": "14"
+    },
+    "52": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0xB4"
+    },
+    "55": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "JUMP",
+      "path": "14"
+    },
+    "56": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "JUMPDEST",
+      "path": "14"
+    },
+    "57": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "CALLDATASIZE",
+      "path": "14"
+    },
+    "58": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0xB4"
+    },
+    "61": {
+      "fn": null,
+      "offset": [
+        57,
+        511
+      ],
+      "op": "JUMPI",
+      "path": "14"
+    },
+    "62": {
+      "fn": "King.<receive>",
+      "offset": [
+        318,
+        323
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "statement": 0,
+      "value": "0x1"
+    },
+    "64": {
+      "fn": "King.<receive>",
+      "offset": [
+        318,
+        323
+      ],
+      "op": "SLOAD",
+      "path": "14"
+    },
+    "65": {
+      "fn": "King.<receive>",
+      "offset": [
+        305,
+        314
+      ],
+      "op": "CALLVALUE",
+      "path": "14"
+    },
+    "66": {
+      "fn": "King.<receive>",
+      "offset": [
+        305,
+        323
+      ],
+      "op": "LT",
+      "path": "14"
+    },
+    "67": {
+      "branch": 5,
+      "fn": "King.<receive>",
+      "offset": [
+        305,
+        323
+      ],
+      "op": "ISZERO",
+      "path": "14"
+    },
+    "68": {
+      "fn": "King.<receive>",
+      "offset": [
+        305,
+        346
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "69": {
+      "fn": "King.<receive>",
+      "offset": [
+        305,
+        346
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0x58"
+    },
+    "72": {
+      "branch": 5,
+      "fn": "King.<receive>",
+      "offset": [
+        305,
+        346
+      ],
+      "op": "JUMPI",
+      "path": "14"
+    },
+    "73": {
+      "op": "POP"
+    },
+    "74": {
+      "fn": "King.<receive>",
+      "offset": [
+        341,
+        346
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x2"
+    },
+    "76": {
+      "fn": "King.<receive>",
+      "offset": [
+        341,
+        346
+      ],
+      "op": "SLOAD",
+      "path": "14"
+    },
+    "77": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "79": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "81": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "83": {
+      "op": "SHL"
+    },
+    "84": {
+      "op": "SUB"
+    },
+    "85": {
+      "fn": "King.<receive>",
+      "offset": [
+        341,
+        346
+      ],
+      "op": "AND",
+      "path": "14"
+    },
+    "86": {
+      "fn": "King.<receive>",
+      "offset": [
+        327,
+        337
+      ],
+      "op": "CALLER",
+      "path": "14"
+    },
+    "87": {
+      "branch": 6,
+      "fn": "King.<receive>",
+      "offset": [
+        327,
+        346
+      ],
+      "op": "EQ",
+      "path": "14"
+    },
+    "88": {
+      "fn": "King.<receive>",
+      "offset": [
+        305,
+        346
+      ],
+      "op": "JUMPDEST",
+      "path": "14"
+    },
+    "89": {
+      "fn": "King.<receive>",
+      "offset": [
+        297,
+        347
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0x61"
+    },
+    "92": {
+      "branch": 6,
+      "fn": "King.<receive>",
+      "offset": [
+        297,
+        347
+      ],
+      "op": "JUMPI",
+      "path": "14"
+    },
+    "93": {
+      "fn": "King.<receive>",
+      "offset": [
+        297,
+        347
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x0"
+    },
+    "95": {
+      "fn": "King.<receive>",
+      "offset": [
+        297,
+        347
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "96": {
+      "fn": "King.<receive>",
+      "offset": [
+        297,
+        347
+      ],
+      "op": "REVERT",
+      "path": "14"
+    },
+    "97": {
+      "fn": "King.<receive>",
+      "offset": [
+        297,
+        347
+      ],
+      "op": "JUMPDEST",
+      "path": "14"
+    },
+    "98": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        357
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "statement": 1,
+      "value": "0x0"
+    },
+    "100": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        357
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "101": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        357
+      ],
+      "op": "SLOAD",
+      "path": "14"
+    },
+    "102": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x40"
+    },
+    "104": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "MLOAD",
+      "path": "14"
+    },
+    "105": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "107": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "109": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "111": {
+      "op": "SHL"
+    },
+    "112": {
+      "op": "SUB"
+    },
+    "113": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        357
+      ],
+      "op": "SWAP1",
+      "path": "14"
+    },
+    "114": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        357
+      ],
+      "op": "SWAP2",
+      "path": "14"
+    },
+    "115": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        357
+      ],
+      "op": "AND",
+      "path": "14"
+    },
+    "116": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        357
+      ],
+      "op": "SWAP2",
+      "path": "14"
+    },
+    "117": {
+      "fn": "King.<receive>",
+      "offset": [
+        367,
+        376
+      ],
+      "op": "CALLVALUE",
+      "path": "14"
+    },
+    "118": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "119": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "ISZERO",
+      "path": "14"
+    },
+    "120": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0x8FC"
+    },
+    "123": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "MUL",
+      "path": "14"
+    },
+    "124": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "SWAP3",
+      "path": "14"
+    },
+    "125": {
+      "fn": "King.<receive>",
+      "offset": [
+        367,
+        376
+      ],
+      "op": "SWAP1",
+      "path": "14"
+    },
+    "126": {
+      "fn": "King.<receive>",
+      "offset": [
+        367,
+        376
+      ],
+      "op": "SWAP2",
+      "path": "14"
+    },
+    "127": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "DUP2",
+      "path": "14"
+    },
+    "128": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        357
+      ],
+      "op": "DUP2",
+      "path": "14"
+    },
+    "129": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "DUP2",
+      "path": "14"
+    },
+    "130": {
+      "fn": "King.<receive>",
+      "offset": [
+        367,
+        376
+      ],
+      "op": "DUP6",
+      "path": "14"
+    },
+    "131": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        357
+      ],
+      "op": "DUP9",
+      "path": "14"
+    },
+    "132": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "DUP9",
+      "path": "14"
+    },
+    "133": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "CALL",
+      "path": "14"
+    },
+    "134": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "SWAP4",
+      "path": "14"
+    },
+    "135": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "POP",
+      "path": "14"
+    },
+    "136": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "POP",
+      "path": "14"
+    },
+    "137": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "POP",
+      "path": "14"
+    },
+    "138": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "POP",
+      "path": "14"
+    },
+    "139": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "ISZERO",
+      "path": "14"
+    },
+    "140": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "141": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "ISZERO",
+      "path": "14"
+    },
+    "142": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0x9B"
+    },
+    "145": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "JUMPI",
+      "path": "14"
+    },
+    "146": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "14"
+    },
+    "147": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x0"
+    },
+    "149": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "150": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "14"
+    },
+    "151": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "14"
+    },
+    "152": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x0"
+    },
+    "154": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "REVERT",
+      "path": "14"
+    },
+    "155": {
+      "fn": "King.<receive>",
+      "offset": [
+        353,
+        377
+      ],
+      "op": "JUMPDEST",
+      "path": "14"
+    },
+    "156": {
+      "op": "POP"
+    },
+    "157": {
+      "fn": "King.<receive>",
+      "offset": [
+        383,
+        387
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "statement": 2,
+      "value": "0x0"
+    },
+    "159": {
+      "fn": "King.<receive>",
+      "offset": [
+        383,
+        400
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "160": {
+      "fn": "King.<receive>",
+      "offset": [
+        383,
+        400
+      ],
+      "op": "SLOAD",
+      "path": "14"
+    },
+    "161": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "163": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "165": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "167": {
+      "op": "SHL"
+    },
+    "168": {
+      "op": "SUB"
+    },
+    "169": {
+      "op": "NOT"
+    },
+    "170": {
+      "fn": "King.<receive>",
+      "offset": [
+        383,
+        400
+      ],
+      "op": "AND",
+      "path": "14"
+    },
+    "171": {
+      "fn": "King.<receive>",
+      "offset": [
+        390,
+        400
+      ],
+      "op": "CALLER",
+      "path": "14"
+    },
+    "172": {
+      "fn": "King.<receive>",
+      "offset": [
+        383,
+        400
+      ],
+      "op": "OR",
+      "path": "14"
+    },
+    "173": {
+      "fn": "King.<receive>",
+      "offset": [
+        383,
+        400
+      ],
+      "op": "SWAP1",
+      "path": "14"
+    },
+    "174": {
+      "fn": "King.<receive>",
+      "offset": [
+        383,
+        400
+      ],
+      "op": "SSTORE",
+      "path": "14"
+    },
+    "175": {
+      "fn": "King.<receive>",
+      "offset": [
+        414,
+        423
+      ],
+      "op": "CALLVALUE",
+      "path": "14",
+      "statement": 3
+    },
+    "176": {
+      "fn": "King.<receive>",
+      "offset": [
+        383,
+        400
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x1"
+    },
+    "178": {
+      "fn": "King.<receive>",
+      "offset": [
+        406,
+        423
+      ],
+      "op": "SSTORE",
+      "path": "14"
+    },
+    "179": {
+      "offset": [
+        57,
+        511
+      ],
+      "op": "STOP",
+      "path": "14"
+    },
+    "180": {
+      "fn": "King.<receive>",
+      "offset": [
+        57,
+        511
+      ],
+      "op": "JUMPDEST",
+      "path": "14"
+    },
+    "181": {
+      "fn": "King.<receive>",
+      "offset": [
+        57,
+        511
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x0"
+    },
+    "183": {
+      "fn": "King.<receive>",
+      "offset": [
+        57,
+        511
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "184": {
+      "dev": "Cannot send ether to nonpayable function",
+      "first_revert": true,
+      "fn": "King.<receive>",
+      "offset": [
+        57,
+        511
+      ],
+      "op": "REVERT",
+      "path": "14"
+    },
+    "185": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "JUMPDEST",
+      "path": "14"
+    },
+    "186": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "CALLVALUE",
+      "path": "14"
+    },
+    "187": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "188": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "ISZERO",
+      "path": "14"
+    },
+    "189": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0xC5"
+    },
+    "192": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "JUMPI",
+      "path": "14"
+    },
+    "193": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x0"
+    },
+    "195": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "196": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "REVERT",
+      "path": "14"
+    },
+    "197": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "JUMPDEST",
+      "path": "14"
+    },
+    "198": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "POP",
+      "path": "14"
+    },
+    "199": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0xCE"
+    },
+    "202": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0x126"
+    },
+    "205": {
+      "fn": "King._king",
+      "jump": "i",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "JUMP",
+      "path": "14"
+    },
+    "206": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "JUMPDEST",
+      "path": "14"
+    },
+    "207": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x40"
+    },
+    "209": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "210": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "MLOAD",
+      "path": "14"
+    },
+    "211": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "213": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "215": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "217": {
+      "op": "SHL"
+    },
+    "218": {
+      "op": "SUB"
+    },
+    "219": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "SWAP1",
+      "path": "14"
+    },
+    "220": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "SWAP3",
+      "path": "14"
+    },
+    "221": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "AND",
+      "path": "14"
+    },
+    "222": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "DUP3",
+      "path": "14"
+    },
+    "223": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "MSTORE",
+      "path": "14"
+    },
+    "224": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "MLOAD",
+      "path": "14"
+    },
+    "225": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "SWAP1",
+      "path": "14"
+    },
+    "226": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "DUP2",
+      "path": "14"
+    },
+    "227": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "SWAP1",
+      "path": "14"
+    },
+    "228": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "SUB",
+      "path": "14"
+    },
+    "229": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x20"
+    },
+    "231": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "ADD",
+      "path": "14"
+    },
+    "232": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "SWAP1",
+      "path": "14"
+    },
+    "233": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "RETURN",
+      "path": "14"
+    },
+    "234": {
+      "offset": [
+        121,
+        149
+      ],
+      "op": "JUMPDEST",
+      "path": "14"
+    },
+    "235": {
+      "fn": "King._king",
+      "offset": [
+        121,
+        149
+      ],
+      "op": "CALLVALUE",
+      "path": "14"
+    },
+    "236": {
+      "fn": "King._king",
+      "offset": [
+        121,
+        149
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "237": {
+      "fn": "King._king",
+      "offset": [
+        121,
+        149
+      ],
+      "op": "ISZERO",
+      "path": "14"
+    },
+    "238": {
+      "fn": "King._king",
+      "offset": [
+        121,
+        149
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0xF6"
+    },
+    "241": {
+      "fn": "King._king",
+      "offset": [
+        121,
+        149
+      ],
+      "op": "JUMPI",
+      "path": "14"
+    },
+    "242": {
+      "fn": "King._king",
+      "offset": [
+        121,
+        149
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x0"
+    },
+    "244": {
+      "fn": "King._king",
+      "offset": [
+        121,
+        149
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "245": {
+      "fn": "King._king",
+      "offset": [
+        121,
+        149
+      ],
+      "op": "REVERT",
+      "path": "14"
+    },
+    "246": {
+      "fn": "King._king",
+      "offset": [
+        121,
+        149
+      ],
+      "op": "JUMPDEST",
+      "path": "14"
+    },
+    "247": {
+      "fn": "King._king",
+      "offset": [
+        121,
+        149
+      ],
+      "op": "POP",
+      "path": "14"
+    },
+    "248": {
+      "fn": "King._king",
+      "offset": [
+        121,
+        149
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0xCE"
+    },
+    "251": {
+      "fn": "King._king",
+      "offset": [
+        121,
+        149
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0x135"
+    },
+    "254": {
+      "fn": "King._king",
+      "jump": "i",
+      "offset": [
+        121,
+        149
+      ],
+      "op": "JUMP",
+      "path": "14"
+    },
+    "255": {
+      "offset": [
+        100,
+        117
+      ],
+      "op": "JUMPDEST",
+      "path": "14"
+    },
+    "256": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "CALLVALUE",
+      "path": "14"
+    },
+    "257": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "258": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "ISZERO",
+      "path": "14"
+    },
+    "259": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0x10B"
+    },
+    "262": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "JUMPI",
+      "path": "14"
+    },
+    "263": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x0"
+    },
+    "265": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "266": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "REVERT",
+      "path": "14"
+    },
+    "267": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "JUMPDEST",
+      "path": "14"
+    },
+    "268": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "POP",
+      "path": "14"
+    },
+    "269": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0x114"
+    },
+    "272": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "PUSH2",
+      "path": "14",
+      "value": "0x144"
+    },
+    "275": {
+      "fn": "King._king",
+      "jump": "i",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "JUMP",
+      "path": "14"
+    },
+    "276": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "JUMPDEST",
+      "path": "14"
+    },
+    "277": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x40"
+    },
+    "279": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "DUP1",
+      "path": "14"
+    },
+    "280": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "MLOAD",
+      "path": "14"
+    },
+    "281": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "SWAP2",
+      "path": "14"
+    },
+    "282": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "DUP3",
+      "path": "14"
+    },
+    "283": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "MSTORE",
+      "path": "14"
+    },
+    "284": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "MLOAD",
+      "path": "14"
+    },
+    "285": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "SWAP1",
+      "path": "14"
+    },
+    "286": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "DUP2",
+      "path": "14"
+    },
+    "287": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "SWAP1",
+      "path": "14"
+    },
+    "288": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "SUB",
+      "path": "14"
+    },
+    "289": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x20"
+    },
+    "291": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "ADD",
+      "path": "14"
+    },
+    "292": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "SWAP1",
+      "path": "14"
+    },
+    "293": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "RETURN",
+      "path": "14"
+    },
+    "294": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "JUMPDEST",
+      "path": "14"
+    },
+    "295": {
+      "fn": "King._king",
+      "offset": [
+        470,
+        485
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x0"
+    },
+    "297": {
+      "fn": "King._king",
+      "offset": [
+        500,
+        504
+      ],
+      "op": "SLOAD",
+      "path": "14",
+      "statement": 4
+    },
+    "298": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "300": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "302": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "304": {
+      "op": "SHL"
+    },
+    "305": {
+      "op": "SUB"
+    },
+    "306": {
+      "fn": "King._king",
+      "offset": [
+        500,
+        504
+      ],
+      "op": "AND",
+      "path": "14"
+    },
+    "307": {
+      "fn": "King._king",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "SWAP1",
+      "path": "14"
+    },
+    "308": {
+      "fn": "King._king",
+      "jump": "o",
+      "offset": [
+        432,
+        509
+      ],
+      "op": "JUMP",
+      "path": "14"
+    },
+    "309": {
+      "offset": [
+        121,
+        149
+      ],
+      "op": "JUMPDEST",
+      "path": "14"
+    },
+    "310": {
+      "fn": "King._king",
+      "offset": [
+        121,
+        149
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x2"
+    },
+    "312": {
+      "fn": "King._king",
+      "offset": [
+        121,
+        149
+      ],
+      "op": "SLOAD",
+      "path": "14"
+    },
+    "313": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "315": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "317": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "319": {
+      "op": "SHL"
+    },
+    "320": {
+      "op": "SUB"
+    },
+    "321": {
+      "offset": [
+        121,
+        149
+      ],
+      "op": "AND",
+      "path": "14"
+    },
+    "322": {
+      "fn": "King._king",
+      "offset": [
+        121,
+        149
+      ],
+      "op": "DUP2",
+      "path": "14"
+    },
+    "323": {
+      "fn": "King._king",
+      "jump": "o",
+      "offset": [
+        121,
+        149
+      ],
+      "op": "JUMP",
+      "path": "14"
+    },
+    "324": {
+      "offset": [
+        100,
+        117
+      ],
+      "op": "JUMPDEST",
+      "path": "14"
+    },
+    "325": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "PUSH1",
+      "path": "14",
+      "value": "0x1"
+    },
+    "327": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "SLOAD",
+      "path": "14"
+    },
+    "328": {
+      "fn": "King._king",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "DUP2",
+      "path": "14"
+    },
+    "329": {
+      "fn": "King._king",
+      "jump": "o",
+      "offset": [
+        100,
+        117
+      ],
+      "op": "JUMP",
+      "path": "14"
+    }
+  },
+  "sha1": "22aba80655709d30e5e28d34557a40f8279cd5cf",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.6.0;\n\ncontract King {\n\n  address payable king;\n  uint public prize;\n  address payable public owner;\n\n  constructor() public payable {\n    owner = msg.sender;  \n    king = msg.sender;\n    prize = msg.value;\n  }\n\n  receive() external payable {\n    require(msg.value >= prize || msg.sender == owner);\n    king.transfer(msg.value);\n    king = msg.sender;\n    prize = msg.value;\n  }\n\n  function _king() public view returns (address payable) {\n    return king;\n  }\n}",
+  "sourceMap": "57:454:14:-:0;;;189:5;:18;;-1:-1:-1;;;;;;189:18:14;;;197:10;189:18;;;;;;:5;215:17;;;;;;;;;;246:9;189:18;238:17;57:454;;;;;;",
+  "sourcePath": "contracts/09_King/King.sol",
+  "type": "contract"
+}
